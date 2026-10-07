@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://altools.free.nf/sitemap.xml
