@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Age Calculator by Date of Birth | Calculate Exact Age</title>
+
+<meta name="description" content="Use our free age calculator by date of birth to calculate your exact age in years, months, and days. Fast, simple, and easy to use online.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#E6F7F0;
+  color:#17212b;
+}
+
+header{
+  background:#fff;
+  border-bottom:1px solid #d7eee5;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:800;
+  color:#087A46;
+  text-decoration:none;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#333;
+  margin-left:20px;
+  font-size:14px;
+}
+
+.hero{
+  text-align:center;
+  padding:55px 20px 40px;
+  background:#E6F7F0;
+}
+
+.hero h1{
+  font-size:38px;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+
+.hero h1 span{
+  color:#087A46;
+}
+
+.hero p{
+  color:#40524b;
+  font-size:17px;
+  max-width:680px;
+  margin:auto;
+  line-height:1.6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #d5ebe3;
+  border-radius:15px;
+  padding:24px;
+  box-shadow:0 5px 18px rgba(8,122,70,.08);
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px rgba(8,122,70,.13);
+}
+
+.card h2{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#53635d;
+  font-size:14px;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #cbdcd6;
+  border-radius:9px;
+  margin-bottom:10px;
+  font-size:14px;
+  outline:none;
+  background:#fff;
+  color:#17212b;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#087A46;
+  box-shadow:0 0 0 2px rgba(8,122,70,.12);
+}
+
+button{
+  width:100%;
+  border:0;
+  background:#087A46;
+  color:#ffffff;
+  padding:13px;
+  border-radius:9px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+}
+
+button:hover{
+  background:#065F36;
+}
+
+button:focus-visible{
+  outline:3px solid #17212b;
+  outline-offset:2px;
+}
+
+.result{
+  margin-top:12px;
+  padding:12px;
+  background:#E6F7F0;
+  border:1px solid #ccebdd;
+  border-radius:9px;
+  color:#065F36;
+  font-weight:600;
+  text-align:center;
+  display:none;
+}
+
+.info{
+  line-height:1.8;
+  color:#40524b;
+  margin-top:20px;
+}
+
+.info h2{
+  color:#17212b;
+  margin:20px 0 8px;
+}
+
+.info h3{
+  margin:16px 0 6px;
+  color:#087A46;
+}
+
+.info ul{
+  padding-left:22px;
+  margin-bottom:18px;
+}
+
+.info li{
+  margin-bottom:8px;
+}
+
+.tool-box{
+  max-width:650px;
+  margin:10px auto 30px;
+}
+
+.related-tools{
+  margin-top:25px;
+}
+
+.related-tools a{
+  display:inline-block;
+  margin:5px 5px 5px 0;
+  padding:9px 13px;
+  background:#E6F7F0;
+  color:#065F36;
+  border-radius:7px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.related-tools a:hover{
+  background:#d2f0e3;
+}
+
+footer{
+  margin-top:50px;
+  background:#065F36;
+  color:#ffffff;
+  text-align:center;
+  padding:32px 20px;
+}
+
+footer p{
+  color:#ffffff;
+  font-size:14px;
+  margin-top:8px;
+}
+
+footer a{
+  color:#ffffff;
+  margin:0 8px;
+  font-size:14px;
+}
+
+footer a:focus-visible{
+  outline:3px solid #ffffff;
+  outline-offset:3px;
+}
+
+@media(max-width:550px){
+
+  .hero{
+    padding:45px 20px 35px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .nav a{
+    margin-left:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a class="logo" href="index.html">
+      ALTools
+    </a>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+    </div>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <h1>
+    <span>Age Calculator by Date of Birth</span>
+  </h1>
+
+  <p>
+    Calculate your exact age in years, months, and days using your date of birth.
+  </p>
+
+</section>
+
+<main class="container">
+
+  <div class="tool-box card">
+
+    <h2>Calculate Your Exact Age</h2>
+
+    <p>
+      Enter your date of birth below to find your current chronological age.
+    </p>
+
+    <label for="dob">
+      Date of birth
+    </label>
+
+    <input
+      type="date"
+      id="dob"
+      aria-label="Date of birth"
+    >
+
+    <button
+      type="button"
+      onclick="calc()"
+      aria-label="Calculate your exact age"
+    >
+      Calculate Age
+    </button>
+
+    <div
+      class="result"
+      id="r"
+      aria-live="polite"
+    ></div>
+
+  </div>
+
+  <div class="card info">
+
+    <h2>What Is an Age Calculator?</h2>
+
+    <p>
+      An age calculator is an online tool that calculates a person's chronological age from their date of birth. This free age calculator shows your age in years, months, and days based on today's date.
+    </p>
+
+    <h2>How to Calculate Your Age</h2>
+
+    <p>
+      To calculate your exact age, select your date of birth and click the Calculate Age button. The calculator compares your birth date with the current date and displays your age in years, months, and days.
+    </p>
+
+    <h2>How to Use This Age Calculator</h2>
+
+    <ul>
+      <li>Select your date of birth from the date field.</li>
+      <li>Click the Calculate Age button.</li>
+      <li>Your exact chronological age will appear below the button.</li>
+    </ul>
+
+    <h2>Why Use an Online Age Calculator?</h2>
+
+    <p>
+      Calculating age manually can require checking different month lengths and leap years. An online age calculator makes the process quick and simple, helping you calculate your age without doing the calculation yourself.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How does the age calculator work?</h3>
+
+    <p>
+      The calculator uses your date of birth and the current date to calculate the difference in years, months, and days.
+    </p>
+
+    <h3>Can I calculate my exact age online?</h3>
+
+    <p>
+      Yes. Enter your date of birth into the calculator above and it will display your chronological age in years, months, and days.
+    </p>
+
+    <h3>Is this age calculator free?</h3>
+
+    <p>
+      Yes. The ALTools age calculator is free to use online.
+    </p>
+
+    <h3>Can I use this calculator on a mobile phone?</h3>
+
+    <p>
+      Yes. The age calculator is designed to work on both mobile phones and desktop devices.
+    </p>
+
+  </div>
+
+  <div class="card related-tools">
+
+    <h2>Related Free Tools</h2>
+
+    <p>
+      Explore more free calculators and online tools from ALTools.
+    </p>
+
+    <a href="bmi-calculator.html">BMI Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="word-counter.html">Word Counter</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="qr-code-generator.html">QR Code Generator</a>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <strong>ALTools</strong>
+
+  <p>
+    Free Online Tools, Calculators &amp; Converters
+  </p>
+
+  <p>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+
+  <p>
+    © 2026 ALTools. All Rights Reserved.
+  </p>
+
+</footer>
+
+<script>
+function calc(){
+
+  const input = document.getElementById('dob');
+  const out = document.getElementById('r');
+  const v = input.value;
+
+  if(!v){
+    alert('Please select your date of birth.');
+    input.focus();
+    return;
+  }
+
+  const d = new Date(v + 'T00:00:00');
+  const t = new Date();
+
+  let text;
+
+  if(d > t){
+
+    text = 'Date of birth cannot be in the future.';
+
+  }else{
+
+    let y = t.getFullYear() - d.getFullYear();
+    let m = t.getMonth() - d.getMonth();
+    let day = t.getDate() - d.getDate();
+
+    if(day < 0){
+      m--;
+      day += new Date(
+        t.getFullYear(),
+        t.getMonth(),
+        0
+      ).getDate();
+    }
+
+    if(m < 0){
+      y--;
+      m += 12;
+    }
+
+    text =
+      y + ' Years, ' +
+      m + ' Months, ' +
+      day + ' Days';
+  }
+
+  out.textContent = text;
+  out.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
