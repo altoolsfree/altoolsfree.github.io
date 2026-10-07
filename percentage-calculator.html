@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Percentage Calculator – Calculate Percentages Online | ALTools</title>
+
+<meta name="description" content="Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.">
+
+<link rel="canonical" href="https://altoolsfree.github.io/percentage-calculator.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B8F55">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
+<meta property="og:site_name" content="ALTools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Percentage Calculator – Calculate Percentages Online | ALTools">
+<meta property="og:description" content="Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.">
+<meta property="og:url" content="https://altoolsfree.github.io/percentage-calculator.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Percentage Calculator – Calculate Percentages Online | ALTools">
+<meta name="twitter:description" content="Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Calculator", "url": "https://altoolsfree.github.io/percentage-calculator.html", "description": "Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Percentage Calculator", "item": "https://altoolsfree.github.io/percentage-calculator.html"}]}</script>
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#E6F7F0;
+  color:#17212b;
+}
+
+header{
+  background:#fff;
+  border-bottom:1px solid #d7eee5;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:800;
+  color:#087A46;
+  text-decoration:none;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#333;
+  margin-left:20px;
+  font-size:14px;
+}
+
+.hero{
+  text-align:center;
+  padding:55px 20px 40px;
+  background:#E6F7F0;
+}
+
+.hero h1{
+  font-size:38px;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+
+.hero h1 span{
+  color:#087A46;
+}
+
+.hero p{
+  color:#40524b;
+  font-size:17px;
+  max-width:680px;
+  margin:auto;
+  line-height:1.6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #d5ebe3;
+  border-radius:15px;
+  padding:24px;
+  box-shadow:0 5px 18px rgba(8,122,70,.08);
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px rgba(8,122,70,.13);
+}
+
+.card h2{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#53635d;
+  font-size:14px;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #cbdcd6;
+  border-radius:9px;
+  margin-bottom:10px;
+  font-size:14px;
+  outline:none;
+  background:#fff;
+  color:#17212b;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#087A46;
+  box-shadow:0 0 0 2px rgba(8,122,70,.12);
+}
+
+button{
+  width:100%;
+  border:0;
+  background:#087A46;
+  color:#ffffff;
+  padding:13px;
+  border-radius:9px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+}
+
+button:hover{
+  background:#065F36;
+}
+
+button:focus-visible{
+  outline:3px solid #17212b;
+  outline-offset:2px;
+}
+
+.result{
+  margin-top:12px;
+  padding:12px;
+  background:#E6F7F0;
+  border:1px solid #ccebdd;
+  border-radius:9px;
+  color:#065F36;
+  font-weight:600;
+  text-align:center;
+  display:none;
+}
+
+.info{
+  line-height:1.8;
+  color:#40524b;
+  margin-top:20px;
+}
+
+.info h2{
+  color:#17212b;
+  margin:20px 0 8px;
+}
+
+.info h3{
+  margin:16px 0 6px;
+  color:#087A46;
+}
+
+.info ul{
+  padding-left:22px;
+  margin-bottom:18px;
+}
+
+.info li{
+  margin-bottom:8px;
+}
+
+.tool-box{
+  max-width:650px;
+  margin:10px auto 30px;
+}
+
+.related-tools{
+  margin-top:25px;
+}
+
+.related-tools a{
+  display:inline-block;
+  margin:5px 5px 5px 0;
+  padding:9px 13px;
+  background:#E6F7F0;
+  color:#065F36;
+  border-radius:7px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.related-tools a:hover{
+  background:#d2f0e3;
+}
+
+footer{
+  margin-top:50px;
+  background:#065F36;
+  color:#ffffff;
+  text-align:center;
+  padding:32px 20px;
+}
+
+footer p{
+  color:#ffffff;
+  font-size:14px;
+  margin-top:8px;
+}
+
+footer a{
+  color:#ffffff;
+  margin:0 8px;
+  font-size:14px;
+}
+
+footer a:focus-visible{
+  outline:3px solid #ffffff;
+  outline-offset:3px;
+}
+
+@media(max-width:550px){
+
+  .hero{
+    padding:45px 20px 35px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .nav a{
+    margin-left:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a class="logo" href="index.html">
+      ALTools
+    </a>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+    </div>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <h1>
+    <span>Percentage Calculator</span> – Calculate Percentages Online
+  </h1>
+
+  <p>
+    Calculate the percentage of any number quickly and easily with this free online percentage calculator.
+  </p>
+
+</section>
+
+<main class="container">
+
+  <div class="tool-box card">
+
+    <h2>Calculate a Percentage</h2>
+
+    <p>
+      Enter a percentage and a number to find the percentage amount instantly.
+    </p>
+
+    <label for="p">
+      Percentage
+    </label>
+
+    <input
+      type="number"
+      id="p"
+      placeholder="Enter percentage"
+      aria-label="Percentage"
+      step="any"
+    >
+
+    <label for="n">
+      Number
+    </label>
+
+    <input
+      type="number"
+      id="n"
+      placeholder="Enter number"
+      aria-label="Number"
+      step="any"
+    >
+
+    <button
+      type="button"
+      onclick="calc()"
+      aria-label="Calculate percentage"
+    >
+      Calculate Percentage
+    </button>
+
+    <div
+      class="result"
+      id="r"
+      aria-live="polite"
+    ></div>
+
+  </div>
+
+  <div class="card info">
+
+    <h2>What Is a Percentage?</h2>
+
+    <p>
+      A percentage is a way of expressing a number as a fraction of 100. The percentage symbol (%) is commonly used to represent percentages in everyday calculations, finance, shopping, statistics, and mathematics.
+    </p>
+
+    <h2>How to Calculate a Percentage</h2>
+
+    <p>
+      To calculate a percentage of a number, multiply the percentage by the number and divide the result by 100.
+    </p>
+
+    <p>
+      For example, 20% of 150 is calculated as (20 × 150) ÷ 100 = 30.
+    </p>
+
+    <h2>How to Use This Percentage Calculator</h2>
+
+    <ul>
+      <li>Enter the percentage you want to calculate.</li>
+      <li>Enter the number you want to calculate the percentage of.</li>
+      <li>Click the Calculate Percentage button.</li>
+      <li>Your result will appear instantly.</li>
+    </ul>
+
+    <h2>Common Uses of a Percentage Calculator</h2>
+
+    <p>
+      A percentage calculator can be useful for everyday calculations such as discounts, increases, decreases, test scores, tips, financial calculations, and other basic percentage problems.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I calculate a percentage of a number?</h3>
+
+    <p>
+      Multiply the percentage by the number and divide the result by 100. For example, 10% of 200 is 20.
+    </p>
+
+    <h3>Is this percentage calculator free?</h3>
+
+    <p>
+      Yes. The ALTools percentage calculator is free to use online.
+    </p>
+
+    <h3>Can I calculate percentages with decimal numbers?</h3>
+
+    <p>
+      Yes. This calculator supports decimal values for both the percentage and the number.
+    </p>
+
+    <h3>Can I use this percentage calculator on a mobile phone?</h3>
+
+    <p>
+      Yes. The calculator is designed to work on mobile phones, tablets, and desktop devices.
+    </p>
+
+  </div>
+
+  <div class="card related-tools">
+
+    <h2>Related Free Tools</h2>
+
+    <p>
+      Explore more free calculators and online tools from ALTools.
+    </p>
+
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="bmi-calculator.html">BMI Calculator</a>
+    <a href="word-counter.html">Word Counter</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="qr-code-generator.html">QR Code Generator</a>
+      <a href="discount-percentage-calculator.html">Discount Percentage Calculator</a>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <strong>ALTools</strong>
+
+  <p>
+    Free Online Tools, Calculators &amp; Converters
+  </p>
+
+  <p>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+
+  <p>
+    © 2026 ALTools. All Rights Reserved.
+  </p>
+
+</footer>
+
+<script>
+function calc(){
+
+  const p = parseFloat(document.getElementById('p').value);
+  const n = parseFloat(document.getElementById('n').value);
+  const out = document.getElementById('r');
+
+  if(isNaN(p) || isNaN(n)){
+    alert('Please enter both values.');
+    return;
+  }
+
+  const result =
+    parseFloat(((p * n) / 100).toFixed(8));
+
+  out.textContent =
+    p + '% of ' + n + ' = ' + result;
+
+  out.style.display = 'block';
+}
+</script>
+
+</body>
+</html>

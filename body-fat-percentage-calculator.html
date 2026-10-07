@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Body Fat Percentage Calculator - Free, Accurate (Navy &amp; BMI Method)</title>
+
+<meta name="description" content="Free body fat percentage calculator. Enter your height, neck, waist and hip to get your body fat percentage using the U.S. Navy method, or use the BMI method. Metric and imperial units.">
+
+<link rel="canonical" href="https://altoolsfree.github.io/body-fat-percentage-calculator.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B8F55">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
+<meta property="og:site_name" content="ALTools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Body Fat Percentage Calculator - Free, Accurate (Navy &amp; BMI Method)">
+<meta property="og:description" content="Free body fat percentage calculator. Enter your height, neck, waist and hip to get your body fat percentage using the U.S. Navy method, or use the BMI method. Metric and imperial units.">
+<meta property="og:url" content="https://altoolsfree.github.io/body-fat-percentage-calculator.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Body Fat Percentage Calculator - Free, Accurate (Navy &amp; BMI Method)">
+<meta name="twitter:description" content="Free body fat percentage calculator. Enter your height, neck, waist and hip to get your body fat percentage using the U.S. Navy method, or use the BMI method. Metric and imperial units.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Body Fat Percentage Calculator", "url": "https://altoolsfree.github.io/body-fat-percentage-calculator.html", "description": "Free body fat percentage calculator. Enter your height, neck, waist and hip to get your body fat percentage using the U.S. Navy method, or use the BMI method. Metric and imperial units.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Body Fat Percentage Calculator", "item": "https://altoolsfree.github.io/body-fat-percentage-calculator.html"}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a healthy body fat percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For men, about 14-24% is considered fitness to average. For women, about 21-31% is considered fitness to average. Essential fat is about 2-5% for men and 10-13% for women."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the Navy method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The U.S. Navy method provides an estimate of body fat percentage using body measurements. It is useful for tracking changes over time but is not a medical measurement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should I measure my waist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Men measure at the navel. Women measure at the narrowest point of the waist. Measure the neck just below the larynx and the hip at the widest point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I check my body fat percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once every 2-4 weeks is enough. Measure at the same time of day and under the same conditions each time."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#f2f6f6;
+  --card:#ffffff;
+  --ink:#12292b;
+  --muted:#566b6d;
+  --line:#d5e1e1;
+  --accent:#0e7c86;
+  --accent-d:#0a5b63;
+  --warn:#b4442a;
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0e1819;
+    --card:#152426;
+    --ink:#e6f0f0;
+    --muted:#9bb2b4;
+    --line:#27403f;
+    --accent:#3bb7c2;
+    --accent-d:#2a98a3;
+    --warn:#f08a6e;
+  }
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+
+a{
+  color:var(--accent);
+}
+
+header.site{
+  background:var(--card);
+  border-bottom:1px solid var(--line);
+}
+
+header.site .in{
+  max-width:880px;
+  margin:0 auto;
+  padding:14px 18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header.site strong{
+  font-size:18px;
+}
+
+header.site nav a{
+  margin-right:14px;
+  text-decoration:none;
+  font-size:15px;
+}
+
+main{
+  max-width:880px;
+  margin:0 auto;
+  padding:24px 18px 48px;
+}
+
+h1{
+  font-size:clamp(26px,5vw,38px);
+  line-height:1.2;
+  margin:8px 0;
+}
+
+h2{
+  font-size:22px;
+  margin:36px 0 10px;
+}
+
+h3{
+  font-size:17px;
+  margin:20px 0 6px;
+}
+
+.lead{
+  color:var(--muted);
+  max-width:62ch;
+  margin:0 0 20px;
+}
+
+.tool{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:20px;
+}
+
+.tabs{
+  display:flex;
+  gap:6px;
+  margin-bottom:16px;
+}
+
+.tabs button{
+  flex:1;
+  padding:10px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--ink);
+  border-radius:8px;
+  font:inherit;
+  cursor:pointer;
+}
+
+.tabs button[aria-pressed="true"]{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.field{
+  margin-bottom:12px;
+}
+
+label{
+  display:block;
+  font-size:14px;
+  margin-bottom:4px;
+  color:var(--muted);
+}
+
+input,
+select{
+  width:100%;
+  padding:11px 12px;
+  font:inherit;
+  color:var(--ink);
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+
+input:focus,
+select:focus,
+button:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:1px;
+}
+
+.go{
+  width:100%;
+  padding:13px;
+  margin-top:6px;
+  background:var(--accent);
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.go:hover{
+  background:var(--accent-d);
+}
+
+.err{
+  color:var(--warn);
+  min-height:1.4em;
+  margin:8px 0 0;
+  font-size:14px;
+}
+
+#result{
+  display:none;
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+
+.big{
+  font-size:44px;
+  font-weight:700;
+  line-height:1;
+}
+
+.cat{
+  font-size:18px;
+  margin:4px 0 12px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  font-size:14px;
+}
+
+.stats div{
+  background:var(--bg);
+  border-radius:8px;
+  padding:10px;
+}
+
+.stats b{
+  display:block;
+  font-size:17px;
+}
+
+.bar{
+  position:relative;
+  height:12px;
+  border-radius:6px;
+  margin:16px 0 4px;
+  background:linear-gradient(
+    90deg,
+    #4aa3c9 0%,
+    #3fae7a 25%,
+    #c9b43a 55%,
+    #d9823a 78%,
+    #c0452a 100%
+  );
+}
+
+.bar i{
+  position:absolute;
+  top:-5px;
+  width:4px;
+  height:22px;
+  background:var(--ink);
+  border-radius:2px;
+  transform:translateX(-50%);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:15px;
+  margin:10px 0;
+}
+
+th,
+td{
+  text-align:left;
+  padding:9px 10px;
+  border-bottom:1px solid var(--line);
+}
+
+th{
+  color:var(--muted);
+  font-weight:600;
+}
+
+.table-wrap{
+  overflow-x:auto;
+}
+
+pre{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:12px;
+  border-radius:8px;
+  overflow-x:auto;
+  font-size:14px;
+}
+
+details{
+  border-bottom:1px solid var(--line);
+  padding:12px 0;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:600;
+}
+
+.related a{
+  display:inline-block;
+  margin:4px 12px 4px 0;
+}
+
+footer{
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:14px;
+}
+
+footer .in{
+  max-width:880px;
+  margin:0 auto;
+  padding:18px;
+}
+
+footer a{
+  margin-right:14px;
+}
+
+@media(max-width:480px){
+  .row{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  header.site .in{
+    align-items:flex-start;
+  }
+
+  header.site nav{
+    width:100%;
+  }
+
+  header.site nav a{
+    display:inline-block;
+    margin-bottom:5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site">
+  <div class="in">
+    <strong>AL Tools</strong>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="percentage-calculator.html">Percentage</a>
+      <a href="bmi-calculator.html">BMI</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <h1>Body Fat Percentage Calculator</h1>
+
+  <p class="lead">
+    Find your body fat percentage in seconds. Enter your measurements below.
+    Choose the U.S. Navy method (tape measure) or the BMI method
+    (height, weight and age).
+  </p>
+
+  <section class="tool" aria-label="Body fat calculator">
+
+    <div class="tabs" role="group" aria-label="Calculation method">
+      <button type="button" id="tabNavy" aria-pressed="true">
+        Navy method
+      </button>
+
+      <button type="button" id="tabBmi" aria-pressed="false">
+        BMI method
+      </button>
+    </div>
+
+    <div class="row">
+
+      <div class="field">
+        <label for="sex">Gender</label>
+        <select id="sex">
+          <option value="m">Male</option>
+          <option value="f">Female</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="units">Units</label>
+        <select id="units">
+          <option value="metric">Metric (cm, kg)</option>
+          <option value="imperial">Imperial (in, lb)</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="field">
+        <label for="age">Age (years)</label>
+        <input
+          id="age"
+          type="number"
+          inputmode="decimal"
+          min="10"
+          max="100"
+          placeholder="e.g. 28"
+        >
+      </div>
+
+      <div class="field">
+        <label for="height" id="lblHeight">Height (cm)</label>
+        <input
+          id="height"
+          type="number"
+          inputmode="decimal"
+          min="0"
+          step="any"
+          placeholder="e.g. 175"
+        >
+      </div>
+
+    </div>
+
+    <div id="navyFields">
+
+      <div class="row">
+
+        <div class="field">
+          <label for="neck" id="lblNeck">Neck (cm)</label>
+          <input
+            id="neck"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            placeholder="e.g. 38"
+          >
+        </div>
+
+        <div class="field">
+          <label for="waist" id="lblWaist">Waist (cm)</label>
+          <input
+            id="waist"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            placeholder="e.g. 85"
+          >
+        </div>
+
+      </div>
+
+      <div class="field" id="hipWrap" style="display:none">
+
+        <label for="hip" id="lblHip">Hip (cm)</label>
+
+        <input
+          id="hip"
+          type="number"
+          inputmode="decimal"
+          min="0"
+          step="any"
+          placeholder="e.g. 98"
+        >
+
+      </div>
+
+    </div>
+
+    <div id="bmiFields">
+
+      <div class="field">
+
+        <label for="weight" id="lblWeight">
+          Weight (kg)
+        </label>
+
+        <input
+          id="weight"
+          type="number"
+          inputmode="decimal"
+          min="0"
+          step="any"
+          placeholder="e.g. 72"
+        >
+
+      </div>
+
+    </div>
+
+    <button class="go" id="calc" type="button">
+      Calculate body fat
+    </button>
+
+    <p class="err" id="err" role="alert"></p>
+
+    <div id="result" aria-live="polite">
+
+      <div class="big" id="pct">--</div>
+
+      <div class="cat" id="cat"></div>
+
+      <div class="bar" aria-hidden="true">
+        <i id="marker" style="left:0"></i>
+      </div>
+
+      <div class="stats">
+
+        <div>
+          Fat mass
+          <b id="fatMass">--</b>
+        </div>
+
+        <div>
+          Lean mass
+          <b id="leanMass">--</b>
+        </div>
+
+        <div>
+          BMI
+          <b id="bmiOut">--</b>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <h2>Body fat percentage chart</h2>
+
+  <p>
+    Ranges below follow the American Council on Exercise categories.
+  </p>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Women</th>
+          <th>Men</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Essential fat</td>
+          <td>10-13%</td>
+          <td>2-5%</td>
+        </tr>
+
+        <tr>
+          <td>Athletes</td>
+          <td>14-20%</td>
+          <td>6-13%</td>
+        </tr>
+
+        <tr>
+          <td>Fitness</td>
+          <td>21-24%</td>
+          <td>14-17%</td>
+        </tr>
+
+        <tr>
+          <td>Average</td>
+          <td>25-31%</td>
+          <td>18-24%</td>
+        </tr>
+
+        <tr>
+          <td>Obese</td>
+          <td>32%+</td>
+          <td>25%+</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <h2>How to measure correctly</h2>
+
+  <ul>
+    <li><strong>Height:</strong> stand straight without shoes.</li>
+
+    <li>
+      <strong>Neck:</strong>
+      measure just below the larynx (Adam's apple),
+      with the tape slightly sloping down toward the front.
+    </li>
+
+    <li>
+      <strong>Waist:</strong>
+      men measure at the navel.
+      Women measure at the narrowest part of the waist.
+      Breathe out normally and do not pull the stomach in.
+    </li>
+
+    <li>
+      <strong>Hip (women):</strong>
+      measure around the widest part of the hips and buttocks.
+    </li>
+  </ul>
+
+  <p>
+    Take each measurement twice and use the average.
+    Measure in the morning before eating for the most consistent results.
+  </p>
+
+  <h2>Body fat percentage formulas</h2>
+
+  <h3>U.S. Navy method (metric, cm)</h3>
+
+  <pre>Men:
+BF% = 86.010 × log10(waist - neck)
+      - 70.041 × log10(height) + 36.76
+
+Women:
+BF% = 163.205 × log10(waist + hip - neck)
+      - 97.684 × log10(height) - 78.387</pre>
+
+  <h3>BMI method</h3>
+
+  <pre>BF% = (1.20 × BMI) + (0.23 × age)
+      - (10.8 × sex) - 5.4
+
+sex = 1 for men
+sex = 0 for women</pre>
+
+  <p>
+    The Navy method uses body measurements, while the BMI method
+    estimates body fat using BMI and age. The BMI method can be
+    less accurate for very muscular people.
+  </p>
+
+  <h2>Example</h2>
+
+  <p>
+    A man is 175 cm tall with a 38 cm neck and an 85 cm waist.
+    Using the U.S. Navy formula, his estimated body fat is
+    <strong>about 23.5%</strong>.
+    This falls within the average range for men according to the
+    chart above.
+  </p>
+
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>What is a healthy body fat percentage?</summary>
+    <p>
+      For men, about 14-24% is considered fitness to average.
+      For women, about 21-31% is considered fitness to average.
+      Essential fat is about 2-5% for men and 10-13% for women.
+    </p>
+  </details>
+
+  <details>
+    <summary>How accurate is the Navy method?</summary>
+    <p>
+      The U.S. Navy method provides an estimate using body measurements.
+      It is useful for tracking changes over time but is not a medical
+      measurement.
+    </p>
+  </details>
+
+  <details>
+    <summary>Where should I measure my waist?</summary>
+    <p>
+      Men measure at the navel. Women measure at the narrowest point
+      of the waist. Measure the neck just below the larynx and the
+      hip at the widest point.
+    </p>
+  </details>
+
+  <details>
+    <summary>How often should I check my body fat percentage?</summary>
+    <p>
+      Once every 2-4 weeks is enough. Measure at the same time of day
+      and under the same conditions each time.
+    </p>
+  </details>
+
+  <p>
+    <small>
+      This calculator gives an estimate for general information only.
+      It is not medical advice. Talk to a doctor about your health goals.
+    </small>
+  </p>
+
+  <h2>Related calculators</h2>
+
+  <p class="related">
+    <a href="bmi-calculator.html">BMI Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+  </p>
+
+</main>
+
+<footer>
+
+  <div class="in">
+
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+
+    <div>
+      &copy; <span id="yr"></span> AL Tools
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+(function(){
+
+  var $ = function(id){
+    return document.getElementById(id);
+  };
+
+  var method = 'navy';
+
+  $('yr').textContent = new Date().getFullYear();
+
+  function updatePlaceholders(){
+
+    var imp = $('units').value === 'imperial';
+
+    $('height').placeholder = imp ? 'e.g. 69' : 'e.g. 175';
+    $('neck').placeholder = imp ? 'e.g. 15' : 'e.g. 38';
+    $('waist').placeholder = imp ? 'e.g. 33' : 'e.g. 85';
+    $('hip').placeholder = imp ? 'e.g. 39' : 'e.g. 98';
+    $('weight').placeholder = imp ? 'e.g. 159' : 'e.g. 72';
+
+  }
+
+  function setMethod(m){
+
+    method = m;
+
+    $('tabNavy').setAttribute(
+      'aria-pressed',
+      m === 'navy' ? 'true' : 'false'
+    );
+
+    $('tabBmi').setAttribute(
+      'aria-pressed',
+      m === 'bmi' ? 'true' : 'false'
+    );
+
+    $('navyFields').style.display =
+      m === 'navy' ? '' : 'none';
+
+    syncUnits();
+    syncHip();
+
+    $('result').style.display = 'none';
+    $('err').textContent = '';
+
+  }
+
+  function syncHip(){
+
+    $('hipWrap').style.display =
+      (method === 'navy' && $('sex').value === 'f')
+      ? ''
+      : 'none';
+
+  }
+
+  function syncUnits(){
+
+    var imp = $('units').value === 'imperial';
+
+    var unit = imp ? 'in' : 'cm';
+
+    $('lblHeight').textContent =
+      'Height (' + unit + ')';
+
+    $('lblNeck').textContent =
+      'Neck (' + unit + ')';
+
+    $('lblWaist').textContent =
+      'Waist (' + unit + ')';
+
+    $('lblHip').textContent =
+      'Hip (' + unit + ')';
+
+    $('lblWeight').textContent =
+      'Weight (' + (imp ? 'lb' : 'kg') + ')' +
+      (method === 'navy'
+        ? ' - optional for fat and lean mass'
+        : '');
+
+    updatePlaceholders();
+
+  }
+
+  function category(p, sex){
+
+    var r;
+
+    if(sex === 'm'){
+
+      r = [
+        [6, 'Essential fat'],
+        [14, 'Athlete'],
+        [18, 'Fitness'],
+        [25, 'Average'],
+        [999, 'Obese']
+      ];
+
+    }else{
+
+      r = [
+        [14, 'Essential fat'],
+        [21, 'Athlete'],
+        [25, 'Fitness'],
+        [32, 'Average'],
+        [999, 'Obese']
+      ];
+
+    }
+
+    for(var i = 0; i < r.length; i++){
+
+      if(p < r[i][0]){
+        return r[i][1];
+      }
+
+    }
+
+    return 'Obese';
+
+  }
+
+  function calc(){
+
+    var err = $('err');
+
+    err.textContent = '';
+
+    var sex = $('sex').value;
+    var imp = $('units').value === 'imperial';
+
+    var age = parseFloat($('age').value);
+    var h = parseFloat($('height').value);
+
+    if(!(h > 0)){
+      err.textContent = 'Enter your height.';
+      return;
+    }
+
+    var cm = imp ? 2.54 : 1;
+    var kgf = imp ? 0.45359237 : 1;
+
+    var hc = h * cm;
+    var bf;
+    var weightKg = NaN;
+
+    if(method === 'navy'){
+
+      var neckValue = parseFloat($('neck').value);
+      var waistValue = parseFloat($('waist').value);
+      var hipValue = parseFloat($('hip').value);
+
+      var n = neckValue * cm;
+      var w = waistValue * cm;
+      var hp = hipValue * cm;
+
+      if(!(n > 0) || !(w > 0)){
+
+        err.textContent =
+          'Enter your neck and waist measurements.';
+
+        return;
+      }
+
+      if(sex === 'f'){
+
+        if(!(hp > 0)){
+
+          err.textContent =
+            'Enter your hip measurement.';
+
+          return;
+        }
+
+        if(w + hp - n <= 0){
+
+          err.textContent =
+            'Check your measurements: waist + hip must be larger than neck.';
+
+          return;
+        }
+
+        bf =
+          163.205 * Math.log10(w + hp - n)
+          - 97.684 * Math.log10(hc)
+          - 78.387;
+
+      }else{
+
+        if(w - n <= 0){
+
+          err.textContent =
+            'Check your measurements: waist must be larger than neck.';
+
+          return;
+        }
+
+        bf =
+          86.010 * Math.log10(w - n)
+          - 70.041 * Math.log10(hc)
+          + 36.76;
+
+      }
+
+      var wt = parseFloat($('weight').value);
+
+      if(wt > 0){
+        weightKg = wt * kgf;
+      }
+
+    }else{
+
+      if(!(age >= 10 && age <= 100)){
+
+        err.textContent =
+          'Enter an age between 10 and 100 years.';
+
+        return;
+      }
+
+      var wv = parseFloat($('weight').value);
+
+      if(!(wv > 0)){
+
+        err.textContent =
+          'Enter your weight.';
+
+        return;
+      }
+
+      weightKg = wv * kgf;
+
+      var bmi0 =
+        weightKg / Math.pow(hc / 100, 2);
+
+      bf =
+        1.20 * bmi0
+        + 0.23 * age
+        - 10.8 * (sex === 'm' ? 1 : 0)
+        - 5.4;
+
+    }
+
+    if(
+      !isFinite(bf) ||
+      bf < 2 ||
+      bf > 65
+    ){
+
+      err.textContent =
+        'The result looks unrealistic. Please re-check your measurements.';
+
+      return;
+    }
+
+    $('pct').textContent =
+      bf.toFixed(1) + '%';
+
+    $('cat').textContent =
+      category(bf, sex);
+
+    var marker =
+      ((bf - 2) / (45 - 2)) * 100;
+
+    $('marker').style.left =
+      Math.min(100, Math.max(0, marker)) + '%';
+
+    if(weightKg > 0){
+
+      var fm =
+        weightKg * bf / 100;
+
+      var lm =
+        weightKg - fm;
+
+      var u = imp ? 'lb' : 'kg';
+
+      var f =
+        imp ? 1 / 0.45359237 : 1;
+
+      $('fatMass').textContent =
+        (fm * f).toFixed(1) + ' ' + u;
+
+      $('leanMass').textContent =
+        (lm * f).toFixed(1) + ' ' + u;
+
+      $('bmiOut').textContent =
+        (
+          weightKg /
+          Math.pow(hc / 100, 2)
+        ).toFixed(1);
+
+    }else{
+
+      $('fatMass').textContent = '--';
+      $('leanMass').textContent = '--';
+      $('bmiOut').textContent = '--';
+
+    }
+
+    $('result').style.display = 'block';
+
+  }
+
+  $('tabNavy').onclick = function(){
+    setMethod('navy');
+  };
+
+  $('tabBmi').onclick = function(){
+    setMethod('bmi');
+  };
+
+  $('sex').onchange = function(){
+    syncHip();
+  };
+
+  $('units').onchange = function(){
+    syncUnits();
+  };
+
+  $('calc').onclick = function(){
+    calc();
+  };
+
+  document.addEventListener('keydown', function(e){
+
+    if(
+      e.key === 'Enter' &&
+      e.target.tagName === 'INPUT'
+    ){
+      calc();
+    }
+
+  });
+
+  /* Initial state */
+  setMethod('navy');
+
+})();
+</script>
+
+</body>
+</html>

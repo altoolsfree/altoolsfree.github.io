@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Percentage Calculator – Find Sale Price &amp; Savings | ALTools</title>
+<meta name="description" content="Free discount percentage calculator. Enter the original price and discount percentage to get the final price and the amount you save instantly.">
+<link rel="canonical" href="https://altoolsfree.github.io/discount-percentage-calculator.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B8F55">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
+<meta property="og:site_name" content="ALTools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Discount Percentage Calculator – Find Sale Price &amp; Savings | ALTools">
+<meta property="og:description" content="Free discount percentage calculator. Enter the original price and discount percentage to get the final price and the amount you save instantly.">
+<meta property="og:url" content="https://altoolsfree.github.io/discount-percentage-calculator.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Discount Percentage Calculator – Find Sale Price &amp; Savings | ALTools">
+<meta name="twitter:description" content="Free discount percentage calculator. Enter the original price and discount percentage to get the final price and the amount you save instantly.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Discount Percentage Calculator", "url": "https://altoolsfree.github.io/discount-percentage-calculator.html", "description": "Free discount percentage calculator. Enter the original price and discount percentage to get the final price and the amount you save instantly.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Discount Percentage Calculator", "item": "https://altoolsfree.github.io/discount-percentage-calculator.html"}]}</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I calculate a discount percentage?","acceptedAnswer":{"@type":"Answer","text":"Multiply the original price by the discount percentage and divide by 100 to get the savings. Subtract the savings from the original price to get the final price."}},
+    {"@type":"Question","name":"How do I find the discount percentage from two prices?","acceptedAnswer":{"@type":"Answer","text":"Subtract the sale price from the original price, divide the result by the original price, then multiply by 100."}},
+    {"@type":"Question","name":"What is 25% off 80?","acceptedAnswer":{"@type":"Answer","text":"25% of 80 is 20, so the final price is 80 - 20 = 60."}},
+    {"@type":"Question","name":"Is this discount calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The ALTools discount percentage calculator is free and works on mobile and desktop."}}
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:Arial,Helvetica,sans-serif;background:#E6F7F0;color:#17212b;}
+header{background:#fff;border-bottom:1px solid #d7eee5;position:sticky;top:0;z-index:100;}
+.nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-size:26px;font-weight:800;color:#087A46;text-decoration:none;}
+.nav a{text-decoration:none;color:#333;margin-left:20px;font-size:14px;}
+.hero{text-align:center;padding:55px 20px 40px;background:#E6F7F0;}
+.hero h1{font-size:38px;line-height:1.2;margin-bottom:12px;}
+.hero h1 span{color:#087A46;}
+.hero p{color:#40524b;font-size:17px;max-width:680px;margin:auto;line-height:1.6;}
+.container{max-width:1100px;margin:auto;padding:20px;}
+.card{background:#fff;border:1px solid #d5ebe3;border-radius:15px;padding:24px;box-shadow:0 5px 18px rgba(8,122,70,.08);transition:.2s;}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(8,122,70,.13);}
+.card h2{font-size:20px;margin-bottom:8px;}
+.card p{color:#53635d;font-size:14px;line-height:1.7;margin-bottom:18px;}
+label{font-size:14px;display:block;margin-bottom:4px;}
+input{width:100%;padding:13px;border:1px solid #cbdcd6;border-radius:9px;margin-bottom:10px;font-size:14px;outline:none;background:#fff;color:#17212b;}
+input:focus{border-color:#087A46;box-shadow:0 0 0 2px rgba(8,122,70,.12);}
+button{width:100%;border:0;background:#087A46;color:#fff;padding:13px;border-radius:9px;cursor:pointer;font-size:15px;font-weight:600;}
+button:hover{background:#065F36;}
+button:focus-visible{outline:3px solid #17212b;outline-offset:2px;}
+.result{margin-top:12px;padding:12px;background:#E6F7F0;border:1px solid #ccebdd;border-radius:9px;color:#065F36;font-weight:600;text-align:center;line-height:1.7;display:none;}
+.info{line-height:1.8;color:#40524b;margin-top:20px;}
+.info h2{color:#17212b;margin:20px 0 8px;}
+.info h3{margin:16px 0 6px;color:#087A46;}
+.info ul{padding-left:22px;margin-bottom:18px;}
+.info li{margin-bottom:8px;}
+.info table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:14px;}
+.info th,.info td{border:1px solid #d5ebe3;padding:9px;text-align:center;}
+.info th{background:#E6F7F0;color:#065F36;}
+.tool-box{max-width:650px;margin:10px auto 30px;}
+.related-tools{margin-top:25px;}
+.related-tools a{display:inline-block;margin:5px 5px 5px 0;padding:9px 13px;background:#E6F7F0;color:#065F36;border-radius:7px;text-decoration:none;font-size:14px;font-weight:600;}
+.related-tools a:hover{background:#d2f0e3;}
+footer{margin-top:50px;background:#065F36;color:#fff;text-align:center;padding:32px 20px;}
+footer p{color:#fff;font-size:14px;margin-top:8px;}
+footer a{color:#fff;margin:0 8px;font-size:14px;}
+@media(max-width:550px){
+  .hero{padding:45px 20px 35px;}
+  .hero h1{font-size:30px;}
+  .hero p{font-size:15px;}
+  .nav a{margin-left:10px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">ALTools</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1><span>Discount Percentage Calculator</span> – Find Sale Price &amp; Savings</h1>
+  <p>Enter the original price and the discount to see the final price and how much you save. Free, fast, and works on any device.</p>
+</section>
+
+<main class="container">
+
+  <div class="tool-box card">
+    <h2>Calculate Your Discount</h2>
+    <p>Enter the original price and the discount percentage.</p>
+    <label for="price">Original Price</label>
+    <input type="number" id="price" placeholder="e.g. 80" step="any" min="0">
+    <label for="disc">Discount (%)</label>
+    <input type="number" id="disc" placeholder="e.g. 25" step="any" min="0" max="100">
+    <button type="button" onclick="calcDiscount()">Calculate Discount</button>
+    <div class="result" id="r" aria-live="polite"></div>
+  </div>
+
+  <div class="card info">
+
+    <h2>What Is a Discount Percentage?</h2>
+    <p>A discount percentage tells you how much is taken off the original price of a product or service. A 20% discount means you pay 20 parts less out of every 100 parts of the original price.</p>
+
+    <h2>Discount Formula</h2>
+    <ul>
+      <li><strong>Amount saved</strong> = Original Price × Discount % ÷ 100</li>
+      <li><strong>Final price</strong> = Original Price − Amount Saved</li>
+      <li><strong>Discount %</strong> = (Original Price − Sale Price) ÷ Original Price × 100</li>
+    </ul>
+
+    <h2>Discount Calculation Examples</h2>
+    <p>Say a jacket costs 80 and the store offers 25% off. The saving is 80 × 25 ÷ 100 = 20, so the final price is 80 − 20 = 60.</p>
+    <p>If a phone was 500 and is now 425, the discount is (500 − 425) ÷ 500 × 100 = 15%.</p>
+
+    <h2>Quick Discount Table (on a price of 100)</h2>
+    <table>
+      <tr><th>Discount</th><th>You Save</th><th>You Pay</th></tr>
+      <tr><td>5%</td><td>5</td><td>95</td></tr>
+      <tr><td>10%</td><td>10</td><td>90</td></tr>
+      <tr><td>20%</td><td>20</td><td>80</td></tr>
+      <tr><td>30%</td><td>30</td><td>70</td></tr>
+      <tr><td>50%</td><td>50</td><td>50</td></tr>
+    </table>
+
+    <h2>How to Use This Discount Calculator</h2>
+    <ul>
+      <li>Type the original price in the first box.</li>
+      <li>Type the discount percentage in the second box.</li>
+      <li>Click Calculate Discount.</li>
+      <li>Read the amount you save and the final price you pay.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I calculate a discount percentage?</h3>
+    <p>Multiply the original price by the discount percentage and divide by 100 to get the savings. Subtract the savings from the original price to get the final price.</p>
+
+    <h3>How do I find the discount percentage from two prices?</h3>
+    <p>Subtract the sale price from the original price, divide the result by the original price, then multiply by 100.</p>
+
+    <h3>What is 25% off 80?</h3>
+    <p>25% of 80 is 20, so the final price is 80 − 20 = 60.</p>
+
+    <h3>Is this discount calculator free?</h3>
+    <p>Yes. The ALTools discount percentage calculator is free and works on mobile and desktop.</p>
+
+  </div>
+
+  <div class="card related-tools">
+    <h2>Related Free Tools</h2>
+    <p>Explore more free calculators and online tools from ALTools.</p>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="bmi-calculator.html">BMI Calculator</a>
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="word-counter.html">Word Counter</a>
+  </div>
+
+</main>
+
+<footer>
+  <strong>ALTools</strong>
+  <p>Free Online Tools, Calculators &amp; Converters</p>
+  <p>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+  <p>© 2026 ALTools. All Rights Reserved.</p>
+</footer>
+
+<script>
+function calcDiscount(){
+  const price = parseFloat(document.getElementById('price').value);
+  const disc = parseFloat(document.getElementById('disc').value);
+  const out = document.getElementById('r');
+
+  if(isNaN(price) || isNaN(disc) || price < 0 || disc < 0 || disc > 100){
+    alert('Please enter a valid price and a discount between 0 and 100.');
+    return;
+  }
+
+  const saved = parseFloat(((price * disc) / 100).toFixed(2));
+  const finalPrice = parseFloat((price - saved).toFixed(2));
+
+  out.innerHTML = 'You save: ' + saved + '<br>Final price: ' + finalPrice;
+  out.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
