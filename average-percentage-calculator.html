@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Average Percentage Calculator - Simple, Weighted &amp; Marks</title>
+<meta name="description" content="Free average percentage calculator. Find the average of several percentages, a weighted average, or the overall percentage from marks in different subjects. Shows the steps.">
+<link rel="canonical" href="https://altoolsfree.github.io/average-percentage-calculator.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do you calculate the average of percentages?","acceptedAnswer":{"@type":"Answer","text":"Add all the percentages together and divide by how many there are. For 70%, 80% and 90%, the sum is 240 and the average is 240 / 3 = 80%."}},
+{"@type":"Question","name":"What is a weighted average percentage?","acceptedAnswer":{"@type":"Answer","text":"A weighted average gives each percentage a different importance. Multiply each percentage by its weight, add the results, then divide by the total weight."}},
+{"@type":"Question","name":"Can I just average percentages from different totals?","acceptedAnswer":{"@type":"Answer","text":"Not always. If the percentages come from different totals, add the marks and totals first. For example, 5 out of 10 and 80 out of 100 gives 85 out of 110, which is 77.3%, not the simple average of 65%."}},
+{"@type":"Question","name":"How do I find my average percentage from marks?","acceptedAnswer":{"@type":"Answer","text":"Add your marks from all subjects, add the total marks of all subjects, divide the first by the second and multiply by 100."}}
+]}
+</script>
+<style>
+:root{--g:#00643C;--gd:#004a2d;--bg:#f3f8f5;--card:#fff;--ink:#14261d;--muted:#5a6e63;--line:#d6e5dc;--red:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--g)}
+.nav{max-width:880px;margin:0 auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.nav a{color:#fff;text-decoration:none}
+.logo{font-size:20px;font-weight:700}
+.nav div a{margin-left:16px;font-size:15px}
+main{max-width:880px;margin:0 auto;padding:24px 18px 48px}
+h1{font-size:clamp(26px,5vw,36px);line-height:1.2;margin:6px 0 8px}
+h2{font-size:21px;margin:34px 0 10px}
+h3{font-size:17px;margin:18px 0 6px}
+.lead{color:var(--muted);margin:0 0 20px;max-width:62ch}
+.tool{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+.tabs button{padding:10px 6px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:9px;font:inherit;font-size:14px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
+label{display:block;font-size:14px;margin-bottom:4px;color:var(--muted)}
+textarea{width:100%;min-height:130px;padding:12px;font:16px/1.5 ui-monospace,Consolas,monospace;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;resize:vertical}
+textarea:focus,button:focus-visible{outline:3px solid #7fcfa6;outline-offset:2px}
+.hint{font-size:14px;color:var(--muted);margin:6px 0 12px}
+.go{width:100%;padding:14px;background:var(--g);color:#fff;border:0;border-radius:9px;font:inherit;font-weight:700;font-size:17px;cursor:pointer}
+.go:hover{background:var(--gd)}
+.err{color:var(--red);min-height:1.4em;margin:8px 0 0;font-size:14px}
+#result{display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.big{font-size:42px;font-weight:700;line-height:1.1;word-break:break-all}
+.sub{color:var(--muted);margin:6px 0 0}
+.steps{background:var(--bg);border-radius:9px;padding:12px;margin-top:12px;font-size:15px;overflow-wrap:anywhere}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted)}
+.tw{overflow-x:auto}
+pre{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:9px;overflow-x:auto;font-size:14px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:600}
+.rel a{display:inline-block;margin:4px 14px 4px 0;color:var(--g);font-weight:600}
+footer{background:var(--g);color:#fff;text-align:center;padding:20px 18px;font-size:14px}
+footer a{color:#fff;margin:0 8px}
+@media(max-width:480px){.tabs button{font-size:13px}.big{font-size:34px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">ALTools</a>
+    <div>
+      <a href="index.html#tools">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Average Percentage Calculator</h1>
+  <p class="lead">Find the average of several percentages, a weighted average, or your overall percentage from marks in different subjects. Pick a mode, enter your numbers and get the answer with the steps.</p>
+
+  <section class="tool">
+    <div class="tabs" role="group" aria-label="Calculator mode">
+      <button type="button" id="mAvg" aria-pressed="true">Average of %</button>
+      <button type="button" id="mWt" aria-pressed="false">Weighted</button>
+      <button type="button" id="mMk" aria-pressed="false">Marks to %</button>
+    </div>
+
+    <label for="data" id="lbl">Percentages</label>
+    <textarea id="data" placeholder="70, 80, 90"></textarea>
+    <p class="hint" id="hint">Separate the numbers with commas, spaces or new lines.</p>
+
+    <button class="go" id="calc" type="button">Calculate average</button>
+    <p class="err" id="err" role="alert"></p>
+
+    <div id="result" aria-live="polite">
+      <div class="big" id="out">--</div>
+      <p class="sub" id="sub"></p>
+      <div class="steps" id="steps"></div>
+    </div>
+  </section>
+
+  <h2>How to calculate the average of percentages</h2>
+  <pre>Average = (sum of all percentages) / (number of percentages)</pre>
+  <p>Example: 70%, 80% and 90%. The sum is 240. Divide by 3 to get <strong>80%</strong>.</p>
+
+  <h2>Weighted average percentage</h2>
+  <p>Use this when some items count more than others, for example an exam worth 60% of the grade and homework worth 40%.</p>
+  <pre>Weighted average = (p1 x w1 + p2 x w2 + ...) / (w1 + w2 + ...)</pre>
+  <p>Example: exam 85% with weight 60, homework 70% with weight 40. (85 x 60 + 70 x 40) / 100 = <strong>79%</strong>.</p>
+
+  <h2>Average percentage from marks</h2>
+  <p>To find your overall percentage across subjects, add all the marks you got, add all the total marks, then divide and multiply by 100.</p>
+  <pre>Overall % = (total marks obtained / total maximum marks) x 100</pre>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Subject</th><th>Marks</th><th>Out of</th></tr></thead>
+      <tbody>
+        <tr><td>Maths</td><td>78</td><td>100</td></tr>
+        <tr><td>Science</td><td>41</td><td>50</td></tr>
+        <tr><td>English</td><td>66</td><td>80</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>185</strong></td><td><strong>230</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>185 / 230 x 100 = <strong>80.43%</strong>.</p>
+
+  <h2>Do not average percentages from different totals</h2>
+  <p>Say you got 5 out of 10 on a quiz (50%) and 80 out of 100 on a test (80%). The simple average of 50% and 80% is 65%. But your real overall score is 85 out of 110, which is 77.3%. When totals are different, use the Marks to % mode.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details><summary>How do you calculate the average of percentages?</summary><p>Add all the percentages together and divide by how many there are. For 70%, 80% and 90%, the sum is 240 and the average is 240 / 3 = 80%.</p></details>
+  <details><summary>What is a weighted average percentage?</summary><p>A weighted average gives each percentage a different importance. Multiply each percentage by its weight, add the results, then divide by the total weight.</p></details>
+  <details><summary>Can I just average percentages from different totals?</summary><p>Not always. If the percentages come from different totals, add the marks and totals first. For example, 5 out of 10 and 80 out of 100 gives 85 out of 110, which is 77.3%, not the simple average of 65%.</p></details>
+  <details><summary>How do I find my average percentage from marks?</summary><p>Add your marks from all subjects, add the total marks of all subjects, divide the first by the second and multiply by 100.</p></details>
+
+  <h2>Related calculators</h2>
+  <p class="rel">
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="increase-percentage-calculator.html">Increase Percentage Calculator</a>
+    <a href="discount-percentage-calculator.html">Discount Calculator</a>
+    <a href="bmi-calculator.html">BMI Calculator</a>
+  </p>
+</main>
+
+<footer>
+  <strong>ALTools</strong><br>
+  <a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var mode='avg';
+
+  var cfg={
+    avg:{lbl:'Percentages',ph:'70, 80, 90',hint:'Separate the numbers with commas, spaces or new lines.',btn:'Calculate average'},
+    wt:{lbl:'Percentage and weight (one pair per line)',ph:'85, 60\n70, 40',hint:'Write each line as: percentage, weight. Example: 85, 60 means 85% with weight 60.',btn:'Calculate weighted average'},
+    mk:{lbl:'Marks obtained and total marks (one subject per line)',ph:'78, 100\n41, 50\n66, 80',hint:'Write each line as: marks, total. Example: 78, 100 or 78/100.',btn:'Calculate overall percentage'}
+  };
+
+  function fmt(n){
+    if(!isFinite(n)) return '--';
+    return (Math.round(n*100)/100).toLocaleString('en-US',{maximumFractionDigits:2});
+  }
+
+  function setMode(m){
+    mode=m;
+    $('mAvg').setAttribute('aria-pressed',m==='avg');
+    $('mWt').setAttribute('aria-pressed',m==='wt');
+    $('mMk').setAttribute('aria-pressed',m==='mk');
+    $('lbl').textContent=cfg[m].lbl;
+    $('data').placeholder=cfg[m].ph;
+    $('hint').textContent=cfg[m].hint;
+    $('calc').textContent=cfg[m].btn;
+    $('result').style.display='none';
+    $('err').textContent='';
+  }
+
+  function parseList(s){
+    var parts=s.split(/[\s,;]+/).filter(Boolean), out=[];
+    for(var i=0;i<parts.length;i++){var n=Number(parts[i]);if(isNaN(n))return null;out.push(n);}
+    return out;
+  }
+  function parsePairs(s){
+    var lines=s.split(/\n/).map(function(x){return x.trim()}).filter(Boolean), out=[];
+    for(var i=0;i<lines.length;i++){
+      var p=lines[i].split(/[\s,;\/]+/).filter(Boolean);
+      if(p.length!==2)return {error:'Line '+(i+1)+' needs exactly two numbers.'};
+      var a=Number(p[0]),b=Number(p[1]);
+      if(isNaN(a)||isNaN(b))return {error:'Line '+(i+1)+' has a value that is not a number.'};
+      out.push([a,b]);
+    }
+    return {rows:out};
+  }
+
+  function show(big,sub,steps){
+    $('out').textContent=big;$('sub').textContent=sub;$('steps').innerHTML=steps;
+    $('result').style.display='block';
+  }
+
+  function calc(){
+    $('err').textContent='';
+    var raw=$('data').value.trim();
+    if(!raw){$('err').textContent='Enter your numbers first.';return;}
+
+    if(mode==='avg'){
+      var v=parseList(raw);
+      if(!v||!v.length){$('err').textContent='Use only numbers, separated by commas, spaces or new lines.';return;}
+      var sum=v.reduce(function(a,b){return a+b},0), avg=sum/v.length;
+      show(fmt(avg)+'%','Average of '+v.length+' percentages','Sum = '+v.map(fmt).join(' + ')+' = '+fmt(sum)+'<br>Average = '+fmt(sum)+' / '+v.length+' = <strong>'+fmt(avg)+'%</strong>');
+      return;
+    }
+
+    var r=parsePairs(raw);
+    if(r.error){$('err').textContent=r.error;return;}
+    var rows=r.rows;
+
+    if(mode==='wt'){
+      var tw=0,tp=0,i;
+      for(i=0;i<rows.length;i++){
+        if(rows[i][1]<0){$('err').textContent='Weights cannot be negative.';return;}
+        tw+=rows[i][1];tp+=rows[i][0]*rows[i][1];
+      }
+      if(tw===0){$('err').textContent='The total weight cannot be 0.';return;}
+      var wa=tp/tw;
+      show(fmt(wa)+'%','Weighted average of '+rows.length+' items','Sum of (percentage x weight) = '+fmt(tp)+'<br>Total weight = '+fmt(tw)+'<br>Weighted average = '+fmt(tp)+' / '+fmt(tw)+' = <strong>'+fmt(wa)+'%</strong>');
+    }else{
+      var so=0,st=0,ps=0,j;
+      for(j=0;j<rows.length;j++){
+        if(rows[j][1]<=0){$('err').textContent='Total marks must be more than 0 (line '+(j+1)+').';return;}
+        if(rows[j][0]<0){$('err').textContent='Marks cannot be negative (line '+(j+1)+').';return;}
+        so+=rows[j][0];st+=rows[j][1];ps+=rows[j][0]/rows[j][1]*100;
+      }
+      var overall=so/st*100, simple=ps/rows.length;
+      show(fmt(overall)+'%','Overall percentage across '+rows.length+' subject'+(rows.length>1?'s':''),'Total marks = '+fmt(so)+' out of '+fmt(st)+'<br>Overall = '+fmt(so)+' / '+fmt(st)+' x 100 = <strong>'+fmt(overall)+'%</strong><br>Simple average of each subject %: '+fmt(simple)+'%');
+    }
+  }
+
+  $('mAvg').onclick=function(){setMode('avg')};
+  $('mWt').onclick=function(){setMode('wt')};
+  $('mMk').onclick=function(){setMode('mk')};
+  $('calc').onclick=calc;
+  setMode('avg');
+})();
+</script>
+</body>
+  </html>
