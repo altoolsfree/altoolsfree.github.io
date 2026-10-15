@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Increase Percentage Calculator - Add, Subtract &amp; Find % Change</title>
+<meta name="description" content="Free increase percentage calculator. Increase or decrease a number by a percentage, or find the percentage change between two numbers. Instant results with steps.">
+<link rel="canonical" href="https://altoolsfree.github.io/increase-percentage-calculator.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do you increase a number by a percentage?","acceptedAnswer":{"@type":"Answer","text":"Multiply the number by (1 + percentage / 100). For example, to increase 200 by 15%, calculate 200 x 1.15 = 230."}},
+{"@type":"Question","name":"How do you calculate percentage increase between two numbers?","acceptedAnswer":{"@type":"Answer","text":"Subtract the old value from the new value, divide by the old value, then multiply by 100. For example, going from 50 to 65 is (65 - 50) / 50 x 100 = 30% increase."}},
+{"@type":"Question","name":"Why is a 50% increase followed by a 50% decrease not back to the start?","acceptedAnswer":{"@type":"Answer","text":"Because the second percentage is taken from a bigger number. 100 up 50% is 150, and 150 down 50% is 75, not 100."}},
+{"@type":"Question","name":"Can percentage increase be more than 100%?","acceptedAnswer":{"@type":"Answer","text":"Yes. If a value more than doubles, the increase is over 100%. For example, going from 40 to 100 is a 150% increase."}}
+]}
+</script>
+<style>
+:root{--g:#00643C;--gd:#004a2d;--bg:#f3f8f5;--card:#fff;--ink:#14261d;--muted:#5a6e63;--line:#d6e5dc;--red:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--g)}
+.nav{max-width:880px;margin:0 auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.nav a{color:#fff;text-decoration:none}
+.logo{font-size:20px;font-weight:700}
+.nav div a{margin-left:16px;font-size:15px}
+main{max-width:880px;margin:0 auto;padding:24px 18px 48px}
+h1{font-size:clamp(26px,5vw,36px);line-height:1.2;margin:6px 0 8px}
+h2{font-size:21px;margin:34px 0 10px}
+h3{font-size:17px;margin:18px 0 6px}
+.lead{color:var(--muted);margin:0 0 20px;max-width:62ch}
+.tool{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+.tabs button{padding:10px 6px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:9px;font:inherit;font-size:14px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin-bottom:12px}
+label{display:block;font-size:14px;margin-bottom:4px;color:var(--muted)}
+input{width:100%;padding:12px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px}
+input:focus,button:focus-visible{outline:3px solid #7fcfa6;outline-offset:2px}
+.go{width:100%;padding:14px;margin-top:4px;background:var(--g);color:#fff;border:0;border-radius:9px;font:inherit;font-weight:700;font-size:17px;cursor:pointer}
+.go:hover{background:var(--gd)}
+.err{color:var(--red);min-height:1.4em;margin:8px 0 0;font-size:14px}
+#result{display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.big{font-size:40px;font-weight:700;line-height:1.1;word-break:break-all}
+.sub{color:var(--muted);margin:6px 0 0}
+.steps{background:var(--bg);border-radius:9px;padding:12px;margin-top:12px;font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted)}
+.tw{overflow-x:auto}
+pre{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:9px;overflow-x:auto;font-size:14px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:600}
+.rel a{display:inline-block;margin:4px 14px 4px 0;color:var(--g);font-weight:600}
+footer{background:var(--g);color:#fff;text-align:center;padding:20px 18px;font-size:14px}
+footer a{color:#fff;margin:0 8px}
+@media(max-width:480px){.row{grid-template-columns:1fr}.tabs button{font-size:13px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">ALTools</a>
+    <div>
+      <a href="index.html#tools">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Increase Percentage Calculator</h1>
+  <p class="lead">Increase or decrease a number by a percentage, or find the percentage change between two numbers. Pick a mode, enter your numbers and get the answer with the steps.</p>
+
+  <section class="tool">
+    <div class="tabs" role="group" aria-label="Calculator mode">
+      <button type="button" id="mInc" aria-pressed="true">Increase by %</button>
+      <button type="button" id="mDec" aria-pressed="false">Decrease by %</button>
+      <button type="button" id="mChg" aria-pressed="false">% change</button>
+    </div>
+
+    <div class="row">
+      <div class="field"><label for="a" id="la">Number</label><input id="a" type="number" inputmode="decimal" step="any" placeholder="e.g. 200"></div>
+      <div class="field"><label for="b" id="lb">Increase by (%)</label><input id="b" type="number" inputmode="decimal" step="any" placeholder="e.g. 15"></div>
+    </div>
+
+    <button class="go" id="calc" type="button">Calculate</button>
+    <p class="err" id="err" role="alert"></p>
+
+    <div id="result" aria-live="polite">
+      <div class="big" id="out">--</div>
+      <p class="sub" id="sub"></p>
+      <div class="steps" id="steps"></div>
+    </div>
+  </section>
+
+  <h2>How to calculate a percentage increase</h2>
+  <h3>Increase a number by a percentage</h3>
+  <pre>New value = number x (1 + percentage / 100)</pre>
+  <p>Example: increase 200 by 15%. 200 x (1 + 0.15) = 200 x 1.15 = <strong>230</strong>.</p>
+
+  <h3>Decrease a number by a percentage</h3>
+  <pre>New value = number x (1 - percentage / 100)</pre>
+  <p>Example: decrease 200 by 15%. 200 x (1 - 0.15) = 200 x 0.85 = <strong>170</strong>.</p>
+
+  <h3>Find the percentage change between two numbers</h3>
+  <pre>% change = (new value - old value) / old value x 100</pre>
+  <p>Example: from 50 to 65. (65 - 50) / 50 x 100 = <strong>30% increase</strong>. A negative result means a decrease.</p>
+
+  <h2>Quick reference</h2>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Increase</th><th>Multiply by</th><th>100 becomes</th></tr></thead>
+      <tbody>
+        <tr><td>5%</td><td>1.05</td><td>105</td></tr>
+        <tr><td>10%</td><td>1.10</td><td>110</td></tr>
+        <tr><td>20%</td><td>1.20</td><td>120</td></tr>
+        <tr><td>25%</td><td>1.25</td><td>125</td></tr>
+        <tr><td>50%</td><td>1.50</td><td>150</td></tr>
+        <tr><td>100%</td><td>2.00</td><td>200</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Where people use it</h2>
+  <ul>
+    <li><strong>Salary raise:</strong> a 8% raise on 40,000 gives 43,200.</li>
+    <li><strong>Price rise:</strong> a 12% price increase on a 250 item gives 280.</li>
+    <li><strong>Business growth:</strong> sales going from 12,000 to 15,000 is a 25% increase.</li>
+    <li><strong>Rent, bills and tax:</strong> add a percentage to a base amount.</li>
+  </ul>
+
+  <h2>Increase then decrease is not zero</h2>
+  <p>Raise 100 by 50% and you get 150. Lower 150 by 50% and you get 75, not 100. The second percentage is taken from a bigger number. To go back to the start after a 50% increase, you need a decrease of about 33.3%.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details><summary>How do you increase a number by a percentage?</summary><p>Multiply the number by (1 + percentage / 100). For example, to increase 200 by 15%, calculate 200 x 1.15 = 230.</p></details>
+  <details><summary>How do you calculate percentage increase between two numbers?</summary><p>Subtract the old value from the new value, divide by the old value, then multiply by 100. For example, going from 50 to 65 is (65 - 50) / 50 x 100 = 30% increase.</p></details>
+  <details><summary>Why is a 50% increase followed by a 50% decrease not back to the start?</summary><p>Because the second percentage is taken from a bigger number. 100 up 50% is 150, and 150 down 50% is 75, not 100.</p></details>
+  <details><summary>Can percentage increase be more than 100%?</summary><p>Yes. If a value more than doubles, the increase is over 100%. For example, going from 40 to 100 is a 150% increase.</p></details>
+
+  <h2>Related calculators</h2>
+  <p class="rel">
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="discount-percentage-calculator.html">Discount Calculator</a>
+    <a href="bmi-calculator.html">BMI Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+  </p>
+</main>
+
+<footer>
+  <strong>ALTools</strong><br>
+  <a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var mode='inc';
+
+  function fmt(n){
+    if(!isFinite(n)) return '--';
+    var r=Math.round(n*1e6)/1e6;
+    return r.toLocaleString('en-US',{maximumFractionDigits:6});
+  }
+
+  function setMode(m){
+    mode=m;
+    $('mInc').setAttribute('aria-pressed',m==='inc');
+    $('mDec').setAttribute('aria-pressed',m==='dec');
+    $('mChg').setAttribute('aria-pressed',m==='chg');
+    if(m==='inc'){$('la').textContent='Number';$('lb').textContent='Increase by (%)';$('a').placeholder='e.g. 200';$('b').placeholder='e.g. 15';}
+    if(m==='dec'){$('la').textContent='Number';$('lb').textContent='Decrease by (%)';$('a').placeholder='e.g. 200';$('b').placeholder='e.g. 15';}
+    if(m==='chg'){$('la').textContent='Old value';$('lb').textContent='New value';$('a').placeholder='e.g. 50';$('b').placeholder='e.g. 65';}
+    $('result').style.display='none';
+    $('err').textContent='';
+  }
+
+  function calc(){
+    $('err').textContent='';
+    var a=parseFloat($('a').value), b=parseFloat($('b').value);
+    if(isNaN(a)||isNaN(b)){$('err').textContent='Enter both numbers.';return;}
+    var out,sub,steps;
+
+    if(mode==='inc'){
+      var add=a*b/100; out=a+add;
+      $('out').textContent=fmt(out);
+      sub=fmt(a)+' increased by '+fmt(b)+'% (an increase of '+fmt(add)+')';
+      steps=fmt(a)+' x (1 + '+fmt(b)+' / 100) = '+fmt(a)+' x '+fmt(1+b/100)+' = <strong>'+fmt(out)+'</strong>';
+    }else if(mode==='dec'){
+      var sub2=a*b/100; out=a-sub2;
+      $('out').textContent=fmt(out);
+      sub=fmt(a)+' decreased by '+fmt(b)+'% (a decrease of '+fmt(sub2)+')';
+      steps=fmt(a)+' x (1 - '+fmt(b)+' / 100) = '+fmt(a)+' x '+fmt(1-b/100)+' = <strong>'+fmt(out)+'</strong>';
+    }else{
+      if(a===0){$('err').textContent='The old value cannot be 0.';return;}
+      var ch=(b-a)/Math.abs(a)*100;
+      $('out').textContent=(ch>0?'+':'')+fmt(ch)+'%';
+      sub=ch>0?'A percentage increase of '+fmt(ch)+'%':(ch<0?'A percentage decrease of '+fmt(Math.abs(ch))+'%':'No change');
+      steps='('+fmt(b)+' - '+fmt(a)+') / '+fmt(Math.abs(a))+' x 100 = <strong>'+fmt(ch)+'%</strong>';
+    }
+    $('sub').textContent=sub;
+    $('steps').innerHTML=steps;
+    $('result').style.display='block';
+  }
+
+  $('mInc').onclick=function(){setMode('inc')};
+  $('mDec').onclick=function(){setMode('dec')};
+  $('mChg').onclick=function(){setMode('chg')};
+  $('calc').onclick=calc;
+  document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.tagName==='INPUT')calc();});
+})();
+</script>
+</body>
+  </html>
