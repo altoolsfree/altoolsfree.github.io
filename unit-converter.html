@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unit Converter – Convert Kilometers &amp; Miles Online | ALTools</title>
+<title>Km to Miles &amp; Miles to Km Converter – Free Unit Converter</title>
 
-<meta name="description" content="Use this free online unit converter to convert kilometers to miles and miles to kilometers instantly. Simple, fast and easy to use.">
+<meta name="description" content="Free unit converter for kilometers to miles and miles to kilometers. Enter a value and get an instant result, with formulas and a quick conversion table.">
 
 <meta name="keywords" content="unit converter, online unit converter, free unit converter, kilometers to miles, miles to kilometers, km to miles converter, miles to km converter">
 
@@ -16,15 +16,86 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
 <meta property="og:site_name" content="ALTools">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Unit Converter – Convert Kilometers &amp; Miles Online | ALTools">
-<meta property="og:description" content="Use this free online unit converter to convert kilometers to miles and miles to kilometers instantly. Simple, fast and easy to use.">
+<meta property="og:title" content="Km to Miles &amp; Miles to Km Converter – Free Unit Converter">
+<meta property="og:description" content="Free unit converter for kilometers to miles and miles to kilometers. Enter a value and get an instant result, with formulas and a quick conversion table.">
 <meta property="og:url" content="https://altoolsfree.github.io/unit-converter.html">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unit Converter – Convert Kilometers &amp; Miles Online | ALTools">
-<meta name="twitter:description" content="Use this free online unit converter to convert kilometers to miles and miles to kilometers instantly. Simple, fast and easy to use.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Unit Converter", "url": "https://altoolsfree.github.io/unit-converter.html", "description": "Use this free online unit converter to convert kilometers to miles and miles to kilometers instantly. Simple, fast and easy to use.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<meta name="twitter:title" content="Km to Miles &amp; Miles to Km Converter – Free Unit Converter">
+<meta name="twitter:description" content="Free unit converter for kilometers to miles and miles to kilometers. Enter a value and get an instant result, with formulas and a quick conversion table.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Unit Converter", "item": "https://altoolsfree.github.io/unit-converter.html"}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this unit converter free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The ALTools Unit Converter is free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert kilometers to miles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Select Kilometers → Miles, enter your value, and click Convert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert miles to kilometers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Select Miles → Kilometers to convert miles into kilometers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many miles is 10 km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 kilometers is about 6.214 miles (10 × 0.621371)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many kilometers is 1 mile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 mile is equal to 1.609344 kilometers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many miles is a 5K, 10K or marathon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 5K is about 3.107 miles, a 10K is about 6.214 miles, a half marathon (21.0975 km) is about 13.109 miles and a marathon (42.195 km) is about 26.219 miles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I convert km to miles in my head?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the kilometers by 0.6 for a quick estimate. For example, 50 km is about 30 miles, while the exact value is 31.069 miles. To estimate miles to kilometers, multiply by 1.6."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install any software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The converter works directly in your web browser without requiring any software installation."
+      }
+    }
+  ]
+}
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
@@ -91,6 +162,19 @@ line-height:1.6
 max-width:1100px;
 margin:auto;
 padding:20px
+}
+
+.crumbs{
+font-size:13px;
+color:#687770;
+max-width:650px;
+margin:0 auto 12px
+}
+
+.crumbs a{
+color:#087847;
+text-decoration:none;
+font-weight:600
 }
 
 .card{
@@ -178,9 +262,33 @@ margin:16px 0 6px;
 color:#0B8F55
 }
 
+.info table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:18px;
+font-size:14px
+}
+
+.info th,.info td{
+border:1px solid #d5ebe3;
+padding:9px;
+text-align:center
+}
+
+.info th{
+background:#E6F7F0;
+color:#087847
+}
+
 .tool-box{
 max-width:650px;
 margin:10px auto 30px
+}
+
+.ad-box{
+max-width:100%;
+margin:0 auto 20px;
+overflow:hidden
 }
 
 .related-tools{
@@ -254,15 +362,19 @@ margin-left:10px
 
 <section class="hero">
 
-<h1><span>Unit Converter</span> – Convert Units Online</h1>
+<h1><span>Unit Converter</span> – Km to Miles &amp; Miles to Km</h1>
 
 <p>
-Convert kilometers to miles and miles to kilometers quickly with this free online unit converter.
+Free online unit converter. Convert kilometers to miles and miles to kilometers instantly, with formulas and a quick conversion table below.
 </p>
 
 </section>
 
 <main class="container">
+
+<nav class="crumbs" aria-label="Breadcrumb">
+<a href="index.html">Home</a> &rsaquo; Unit Converter
+</nav>
 
 <div class="tool-box card">
 
@@ -289,6 +401,12 @@ id="r"
 aria-live="polite">
 </div>
 
+</div>
+
+<!-- Adsterra Native Banner (below the converter) -->
+<div class="ad-box">
+<script async="async" data-cfasync="false" src="https://pl31790024.profitableratecpmnetwork.com/a85beb804a4083df9a0183cdc4660c07/invoke.js"></script>
+<div id="container-a85beb804a4083df9a0183cdc4660c07"></div>
 </div>
 
 <div class="card info">
@@ -323,6 +441,46 @@ To convert miles to kilometers, enter a value in miles, select <strong>Miles →
 1 mile is equal to approximately 1.609344 kilometers. To convert miles to kilometers, multiply the mile value by 1.609344.
 </p>
 
+<h2>Km to Miles Conversion Table</h2>
+
+<table>
+<tr><th>Kilometers</th><th>Miles</th></tr>
+<tr><td>1 km</td><td>0.621 mi</td></tr>
+<tr><td>5 km</td><td>3.107 mi</td></tr>
+<tr><td>10 km</td><td>6.214 mi</td></tr>
+<tr><td>20 km</td><td>12.427 mi</td></tr>
+<tr><td>50 km</td><td>31.069 mi</td></tr>
+<tr><td>100 km</td><td>62.137 mi</td></tr>
+</table>
+
+<h2>Miles to Km Conversion Table</h2>
+
+<table>
+<tr><th>Miles</th><th>Kilometers</th></tr>
+<tr><td>1 mi</td><td>1.609 km</td></tr>
+<tr><td>5 mi</td><td>8.047 km</td></tr>
+<tr><td>10 mi</td><td>16.093 km</td></tr>
+<tr><td>20 mi</td><td>32.187 km</td></tr>
+<tr><td>50 mi</td><td>80.467 km</td></tr>
+<tr><td>100 mi</td><td>160.934 km</td></tr>
+</table>
+
+<h2>Common Running Distances in Miles</h2>
+
+<table>
+<tr><th>Race</th><th>Kilometers</th><th>Miles</th></tr>
+<tr><td>5K</td><td>5 km</td><td>3.107 mi</td></tr>
+<tr><td>10K</td><td>10 km</td><td>6.214 mi</td></tr>
+<tr><td>Half marathon</td><td>21.0975 km</td><td>13.109 mi</td></tr>
+<tr><td>Marathon</td><td>42.195 km</td><td>26.219 mi</td></tr>
+</table>
+
+<h2>Quick Mental Math</h2>
+
+<p>
+For a fast estimate, multiply kilometers by 0.6 to get miles, and multiply miles by 1.6 to get kilometers. For example, 50 km is about 30 miles, while the exact answer is 31.069 miles.
+</p>
+
 <h2>How to Use This Unit Converter</h2>
 
 <p>
@@ -349,6 +507,30 @@ Yes. Select Kilometers → Miles, enter your value, and click Convert.
 Yes. Select Miles → Kilometers to convert miles into kilometers.
 </p>
 
+<h3>How many miles is 10 km?</h3>
+
+<p>
+10 kilometers is about 6.214 miles (10 × 0.621371).
+</p>
+
+<h3>How many kilometers is 1 mile?</h3>
+
+<p>
+1 mile is equal to 1.609344 kilometers.
+</p>
+
+<h3>How many miles is a 5K, 10K or marathon?</h3>
+
+<p>
+A 5K is about 3.107 miles, a 10K is about 6.214 miles, a half marathon (21.0975 km) is about 13.109 miles and a marathon (42.195 km) is about 26.219 miles.
+</p>
+
+<h3>How can I convert km to miles in my head?</h3>
+
+<p>
+Multiply the kilometers by 0.6 for a quick estimate. For example, 50 km is about 30 miles, while the exact value is 31.069 miles. To estimate miles to kilometers, multiply by 1.6.
+</p>
+
 <h3>Do I need to install any software?</h3>
 
 <p>
@@ -362,6 +544,8 @@ No. The converter works directly in your web browser without requiring any softw
 <a href="age-calculator.html">Age Calculator</a>
 
 <a href="bmi-calculator.html">BMI Calculator</a>
+
+<a href="body-fat-percentage-calculator.html">Body Fat Calculator</a>
 
 <a href="percentage-calculator.html">Percentage Calculator</a>
 
@@ -412,6 +596,9 @@ out.style.display = 'block';
 
 }
 </script>
+
+<!-- Adsterra Social Bar (once) -->
+<script src="https://pl31790023.profitableratecpmnetwork.com/2c/70/cd/2c70cd2c974d45daa45e39a3ca39f45e.js"></script>
 
 </body>
 </html>
