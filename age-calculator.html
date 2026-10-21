@@ -21,7 +21,6 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Age Calculator by Date of Birth – Free Online Age Calculator">
 <meta name="twitter:description" content="Free online age calculator by date of birth. Find your exact age in years, months and days as of today. Fast, simple and works on mobile.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Age Calculator", "url": "https://altoolsfree.github.io/age-calculator.html", "description": "Free online age calculator by date of birth. Find your exact age in years, months and days as of today. Fast, simple and works on mobile.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Age Calculator", "item": "https://altoolsfree.github.io/age-calculator.html"}]}</script>
 <script type="application/ld+json">
 {
@@ -58,6 +57,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. The date field follows your device's date format, so it works the same whether you use day/month/year or month/day/year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the age calculator handle leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator uses the real number of days in each month, including 29 February in leap years, so the result in years, months and days is exact."
       }
     },
     {
@@ -287,6 +294,12 @@ button:focus-visible{
   margin:10px auto 30px;
 }
 
+.ad-box{
+  max-width:100%;
+  margin:0 auto 20px;
+  overflow:hidden;
+}
+
 .related-tools{
   margin-top:25px;
 }
@@ -383,7 +396,6 @@ footer a:focus-visible{
 
 </section>
 
-  
 <main class="container">
 
   <nav class="crumbs" aria-label="Breadcrumb">
@@ -424,9 +436,11 @@ footer a:focus-visible{
 
   </div>
 
-  <!-- Adsterra Native Banner (moved here, below the calculator) -->
-  <script async="async" data-cfasync="false" src="https://pl31790024.profitableratecpmnetwork.com/a85beb804a4083df9a0183cdc4660c07/invoke.js"></script>
-  <div id="container-a85beb804a4083df9a0183cdc4660c07"></div>
+  <!-- Adsterra Native Banner (below the calculator) -->
+  <div class="ad-box">
+    <script async="async" data-cfasync="false" src="https://pl31790024.profitableratecpmnetwork.com/a85beb804a4083df9a0183cdc4660c07/invoke.js"></script>
+    <div id="container-a85beb804a4083df9a0183cdc4660c07"></div>
+  </div>
 
   <div class="card info">
 
@@ -486,6 +500,12 @@ footer a:focus-visible{
 
     <p>
       Yes. The date field follows your device's date format, so it works the same whether you use day/month/year or month/day/year.
+    </p>
+
+    <h3>How does the age calculator handle leap years?</h3>
+
+    <p>
+      The calculator uses the real number of days in each month, including 29 February in leap years, so the result in years, months and days is exact.
     </p>
 
     <h3>Is this age calculator free?</h3>
@@ -612,8 +632,9 @@ function calc(){
   out.style.display = 'block';
 }
 </script>
+
+<!-- Adsterra script (once) -->
 <script src="https://pl31790023.profitableratecpmnetwork.com/2c/70/cd/2c70cd2c974d45daa45e39a3ca39f45e.js"></script>
 
 </body>
-  
 </html>
