@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QR Code Generator – Create QR Codes Online | ALTools</title>
+<title>QR Code Generator – Create Free QR Codes for URL &amp; Text</title>
 
-<meta name="description" content="Create a free QR code from text or any website URL with this easy online QR code generator. Generate QR codes quickly and easily.">
+<meta name="description" content="Free online QR code generator. Create a QR code from any website URL or text in seconds. No sign-up, no software to install, works on mobile.">
 
 <meta name="keywords" content="QR code generator, free QR code generator, online QR code generator, create QR code, QR code maker, URL QR code generator, text QR code generator">
 
@@ -16,15 +16,86 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
 <meta property="og:site_name" content="ALTools">
 <meta property="og:type" content="website">
-<meta property="og:title" content="QR Code Generator – Create QR Codes Online | ALTools">
-<meta property="og:description" content="Create a free QR code from text or any website URL with this easy online QR code generator. Generate QR codes quickly and easily.">
+<meta property="og:title" content="QR Code Generator – Create Free QR Codes for URL &amp; Text">
+<meta property="og:description" content="Free online QR code generator. Create a QR code from any website URL or text in seconds. No sign-up, no software to install, works on mobile.">
 <meta property="og:url" content="https://altoolsfree.github.io/qr-code-generator.html">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QR Code Generator – Create QR Codes Online | ALTools">
-<meta name="twitter:description" content="Create a free QR code from text or any website URL with this easy online QR code generator. Generate QR codes quickly and easily.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "QR Code Generator", "url": "https://altoolsfree.github.io/qr-code-generator.html", "description": "Create a free QR code from text or any website URL with this easy online QR code generator. Generate QR codes quickly and easily.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<meta name="twitter:title" content="QR Code Generator – Create Free QR Codes for URL &amp; Text">
+<meta name="twitter:description" content="Free online QR code generator. Create a QR code from any website URL or text in seconds. No sign-up, no software to install, works on mobile.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "QR Code Generator", "item": "https://altoolsfree.github.io/qr-code-generator.html"}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this QR code generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The ALTools QR Code Generator is free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create a QR code for a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter your website URL in the input box and click Generate QR Code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create a QR code from text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can enter text and generate a QR code containing that information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The QR Code Generator works directly in your web browser. No software installation is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I scan a QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open your phone's camera and point it at the QR code. A link or text appears on the screen, so tap it to open. If nothing appears, try a QR scanner app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I make a QR code for a phone number or email address?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Type tel: followed by the number, for example tel:+1234567890, or mailto: followed by the email address, then click Generate QR Code. Phones will offer to call or write an email when the code is scanned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I save the QR code image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After the QR code appears, press and hold it on a phone, or right-click it on a computer, and choose to save or download the image."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a QR code expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The text or link is stored directly in the QR code pattern, so the code itself does not expire. If the website it points to goes offline, the link will stop working."
+      }
+    }
+  ]
+}
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
@@ -91,6 +162,19 @@ line-height:1.6
 max-width:1100px;
 margin:auto;
 padding:20px
+}
+
+.crumbs{
+font-size:13px;
+color:#687770;
+max-width:650px;
+margin:0 auto 12px
+}
+
+.crumbs a{
+color:#087847;
+text-decoration:none;
+font-weight:600
 }
 
 .card{
@@ -186,9 +270,23 @@ margin:16px 0 6px;
 color:#0B8F55
 }
 
+.info ul{
+margin:0 0 18px 20px
+}
+
+.info li{
+margin-bottom:6px
+}
+
 .tool-box{
 max-width:650px;
 margin:10px auto 30px
+}
+
+.ad-box{
+max-width:100%;
+margin:0 auto 20px;
+overflow:hidden
 }
 
 .related-tools{
@@ -265,12 +363,16 @@ margin-left:10px
 <h1><span>QR Code Generator</span> – Create QR Codes Online</h1>
 
 <p>
-Create a QR code from text or any website URL with this free online QR code generator.
+Free online QR code generator. Create a QR code from any website URL or text in seconds, with no sign-up and no software to install.
 </p>
 
 </section>
 
 <main class="container">
+
+<nav class="crumbs" aria-label="Breadcrumb">
+<a href="index.html">Home</a> &rsaquo; QR Code Generator
+</nav>
 
 <div class="tool-box card">
 
@@ -290,6 +392,12 @@ id="r"
 aria-live="polite">
 </div>
 
+</div>
+
+<!-- Adsterra Native Banner (below the generator) -->
+<div class="ad-box">
+<script async="async" data-cfasync="false" src="https://pl31790024.profitableratecpmnetwork.com/a85beb804a4083df9a0183cdc4660c07/invoke.js"></script>
+<div id="container-a85beb804a4083df9a0183cdc4660c07"></div>
 </div>
 
 <div class="card info">
@@ -317,6 +425,33 @@ You can enter a complete website address such as https://example.com to create a
 <p>
 You can also enter plain text and generate a QR code containing that information.
 </p>
+
+<h2>What You Can Put in a QR Code</h2>
+
+<ul>
+<li><strong>Website link:</strong> https://example.com</li>
+<li><strong>Plain text:</strong> any short message or note</li>
+<li><strong>Phone number:</strong> tel:+1234567890</li>
+<li><strong>Email address:</strong> mailto:name@example.com</li>
+</ul>
+
+<h2>How to Save and Scan a QR Code</h2>
+
+<ul>
+<li>After the code appears, press and hold it on a phone (or right-click on a computer) and choose to save the image.</li>
+<li>To scan a code, open your phone's camera and point it at the QR code.</li>
+<li>Tap the link or text that appears on the screen.</li>
+</ul>
+
+<h2>Tips for a QR Code That Scans Well</h2>
+
+<ul>
+<li>Test the code with your own phone before you print or share it.</li>
+<li>Keep it large enough. Printing it at about 2 cm × 2 cm or bigger works well.</li>
+<li>Use dark code on a light background for strong contrast.</li>
+<li>Shorter text or links make a simpler code that is easier to scan.</li>
+<li>Do not enter passwords or private information. The code image is drawn by a third-party QR service.</li>
+</ul>
 
 <h2>Why Use a QR Code?</h2>
 
@@ -350,6 +485,30 @@ Yes. You can enter text and generate a QR code containing that information.
 No. The QR Code Generator works directly in your web browser. No software installation is required.
 </p>
 
+<h3>How do I scan a QR code?</h3>
+
+<p>
+Open your phone's camera and point it at the QR code. A link or text appears on the screen, so tap it to open. If nothing appears, try a QR scanner app.
+</p>
+
+<h3>Can I make a QR code for a phone number or email address?</h3>
+
+<p>
+Yes. Type tel: followed by the number, for example tel:+1234567890, or mailto: followed by the email address, then click Generate QR Code. Phones will offer to call or write an email when the code is scanned.
+</p>
+
+<h3>How do I save the QR code image?</h3>
+
+<p>
+After the QR code appears, press and hold it on a phone, or right-click it on a computer, and choose to save or download the image.
+</p>
+
+<h3>Does a QR code expire?</h3>
+
+<p>
+No. The text or link is stored directly in the QR code pattern, so the code itself does not expire. If the website it points to goes offline, the link will stop working.
+</p>
+
 <h2>Related Free Tools</h2>
 
 <div class="related-tools">
@@ -363,6 +522,8 @@ No. The QR Code Generator works directly in your web browser. No software instal
 <a href="word-counter.html">Word Counter</a>
 
 <a href="unit-converter.html">Unit Converter</a>
+
+<a href="password-generator.html">Password Generator</a>
 
 </div>
 
@@ -413,6 +574,9 @@ out.style.display = 'block';
 
 }
 </script>
+
+<!-- Adsterra Social Bar (once) -->
+<script src="https://pl31790023.profitableratecpmnetwork.com/2c/70/cd/2c70cd2c974d45daa45e39a3ca39f45e.js"></script>
 
 </body>
 </html>
