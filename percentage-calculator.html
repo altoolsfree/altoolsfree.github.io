@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Percentage Calculator – Calculate Percentages Online | ALTools</title>
+<title>Percentage Calculator – Find X% of a Number (Free Online)</title>
 
-<meta name="description" content="Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.">
+<meta name="description" content="Free percentage calculator. Find any percentage of a number instantly, with formulas, examples and a quick table. Works on mobile and desktop.">
 
 <link rel="canonical" href="https://altoolsfree.github.io/percentage-calculator.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -14,15 +14,78 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
 <meta property="og:site_name" content="ALTools">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Percentage Calculator – Calculate Percentages Online | ALTools">
-<meta property="og:description" content="Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.">
+<meta property="og:title" content="Percentage Calculator – Find X% of a Number (Free Online)">
+<meta property="og:description" content="Free percentage calculator. Find any percentage of a number instantly, with formulas, examples and a quick table. Works on mobile and desktop.">
 <meta property="og:url" content="https://altoolsfree.github.io/percentage-calculator.html">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Percentage Calculator – Calculate Percentages Online | ALTools">
-<meta name="twitter:description" content="Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Calculator", "url": "https://altoolsfree.github.io/percentage-calculator.html", "description": "Use our free percentage calculator to calculate percentages quickly and easily. Find the percentage of any number instantly with this simple online calculator.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<meta name="twitter:title" content="Percentage Calculator – Find X% of a Number (Free Online)">
+<meta name="twitter:description" content="Free percentage calculator. Find any percentage of a number instantly, with formulas, examples and a quick table. Works on mobile and desktop.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Percentage Calculator", "item": "https://altoolsfree.github.io/percentage-calculator.html"}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a percentage of a number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the percentage by the number and divide the result by 100. For example, 10% of 200 is 20."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find what percent one number is of another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the part by the whole and multiply by 100. For example, 30 out of 150 is 30 ÷ 150 × 100 = 20%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate 10% of a number quickly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Move the decimal point one place to the left. For example, 10% of 250 is 25."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a percentage increase or decrease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the old value from the new value, divide by the old value, then multiply by 100. For example, a rise from 80 to 100 is (100 − 80) ÷ 80 × 100 = 25%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate percentages with decimal numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This calculator supports decimal values for both the percentage and the number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this percentage calculator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The ALTools percentage calculator is free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this percentage calculator on a mobile phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculator is designed to work on mobile phones, tablets, and desktop devices."
+      }
+    }
+  ]
+}
+</script>
 <style>
 *{
   box-sizing:border-box;
@@ -99,6 +162,19 @@ header{
   max-width:1100px;
   margin:auto;
   padding:20px;
+}
+
+.crumbs{
+  font-size:13px;
+  color:#40524b;
+  max-width:650px;
+  margin:0 auto 12px;
+}
+
+.crumbs a{
+  color:#065F36;
+  text-decoration:none;
+  font-weight:600;
 }
 
 .card{
@@ -197,6 +273,11 @@ button:focus-visible{
   color:#087A46;
 }
 
+.info a{
+  color:#065F36;
+  font-weight:600;
+}
+
 .info ul{
   padding-left:22px;
   margin-bottom:18px;
@@ -206,9 +287,34 @@ button:focus-visible{
   margin-bottom:8px;
 }
 
+.info table{
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:18px;
+  font-size:14px;
+}
+
+.info th,
+.info td{
+  border:1px solid #d5ebe3;
+  padding:9px;
+  text-align:center;
+}
+
+.info th{
+  background:#E6F7F0;
+  color:#065F36;
+}
+
 .tool-box{
   max-width:650px;
   margin:10px auto 30px;
+}
+
+.ad-box{
+  max-width:100%;
+  margin:0 auto 20px;
+  overflow:hidden;
 }
 
 .related-tools{
@@ -302,12 +408,16 @@ footer a:focus-visible{
   </h1>
 
   <p>
-    Calculate the percentage of any number quickly and easily with this free online percentage calculator.
+    Free online percentage calculator. Find the percentage of any number quickly and easily, with formulas and examples below.
   </p>
 
 </section>
 
 <main class="container">
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Percentage Calculator
+  </nav>
 
   <div class="tool-box card">
 
@@ -357,6 +467,12 @@ footer a:focus-visible{
 
   </div>
 
+  <!-- Adsterra Native Banner (below the calculator) -->
+  <div class="ad-box">
+    <script async="async" data-cfasync="false" src="https://pl31790024.profitableratecpmnetwork.com/a85beb804a4083df9a0183cdc4660c07/invoke.js"></script>
+    <div id="container-a85beb804a4083df9a0183cdc4660c07"></div>
+  </div>
+
   <div class="card info">
 
     <h2>What Is a Percentage?</h2>
@@ -374,6 +490,38 @@ footer a:focus-visible{
     <p>
       For example, 20% of 150 is calculated as (20 × 150) ÷ 100 = 30.
     </p>
+
+    <h2>Percentage Formulas</h2>
+
+    <ul>
+      <li><strong>Percentage of a number</strong> = Percentage × Number ÷ 100</li>
+      <li><strong>What percent is A of B</strong> = A ÷ B × 100</li>
+      <li><strong>Percentage change</strong> = (New value − Old value) ÷ Old value × 100</li>
+    </ul>
+
+    <p>
+      For percentage change, you can also use our <a href="increase-percentage-calculator.html">Percentage Increase Calculator</a>. To find the average of several percentages, try the <a href="average-percentage-calculator.html">Average Percentage Calculator</a>.
+    </p>
+
+    <h2>Percentage Examples</h2>
+
+    <ul>
+      <li>15% of 200 = (15 × 200) ÷ 100 = 30</li>
+      <li>7.5% of 80 = (7.5 × 80) ÷ 100 = 6</li>
+      <li>30 out of 150 = 30 ÷ 150 × 100 = 20%</li>
+    </ul>
+
+    <h2>Quick Percentage Table (of 200)</h2>
+
+    <table>
+      <tr><th>Percentage</th><th>Value</th></tr>
+      <tr><td>5%</td><td>10</td></tr>
+      <tr><td>10%</td><td>20</td></tr>
+      <tr><td>15%</td><td>30</td></tr>
+      <tr><td>20%</td><td>40</td></tr>
+      <tr><td>25%</td><td>50</td></tr>
+      <tr><td>50%</td><td>100</td></tr>
+    </table>
 
     <h2>How to Use This Percentage Calculator</h2>
 
@@ -398,16 +546,34 @@ footer a:focus-visible{
       Multiply the percentage by the number and divide the result by 100. For example, 10% of 200 is 20.
     </p>
 
-    <h3>Is this percentage calculator free?</h3>
+    <h3>How do I find what percent one number is of another?</h3>
 
     <p>
-      Yes. The ALTools percentage calculator is free to use online.
+      Divide the part by the whole and multiply by 100. For example, 30 out of 150 is 30 ÷ 150 × 100 = 20%.
+    </p>
+
+    <h3>How do I calculate 10% of a number quickly?</h3>
+
+    <p>
+      Move the decimal point one place to the left. For example, 10% of 250 is 25.
+    </p>
+
+    <h3>How do I calculate a percentage increase or decrease?</h3>
+
+    <p>
+      Subtract the old value from the new value, divide by the old value, then multiply by 100. For example, a rise from 80 to 100 is (100 − 80) ÷ 80 × 100 = 25%.
     </p>
 
     <h3>Can I calculate percentages with decimal numbers?</h3>
 
     <p>
       Yes. This calculator supports decimal values for both the percentage and the number.
+    </p>
+
+    <h3>Is this percentage calculator free?</h3>
+
+    <p>
+      Yes. The ALTools percentage calculator is free to use online.
     </p>
 
     <h3>Can I use this percentage calculator on a mobile phone?</h3>
@@ -481,5 +647,8 @@ function calc(){
 }
 </script>
 
+<!-- Adsterra Social Bar (once) -->
+<script src="https://pl31790023.profitableratecpmnetwork.com/2c/70/cd/2c70cd2c974d45daa45e39a3ca39f45e.js"></script>
+
 </body>
-</html>
+  </html>
