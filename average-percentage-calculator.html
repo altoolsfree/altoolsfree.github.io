@@ -4,14 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Average Percentage Calculator - Simple, Weighted &amp; Marks</title>
-<meta name="description" content="Free average percentage calculator. Find the average of several percentages, a weighted average, or the overall percentage from marks in different subjects. Shows the steps.">
+<meta name="description" content="Free average percentage calculator. Find the average of percentages, a weighted average, or overall percentage from marks in 5 or more subjects, with steps.">
 <link rel="canonical" href="https://altoolsfree.github.io/average-percentage-calculator.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#00643C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AE%3C/text%3E%3C/svg%3E">
+<meta property="og:site_name" content="ALTools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Average Percentage Calculator - Simple, Weighted &amp; Marks">
+<meta property="og:description" content="Free average percentage calculator. Find the average of percentages, a weighted average, or overall percentage from marks in 5 or more subjects, with steps.">
+<meta property="og:url" content="https://altoolsfree.github.io/average-percentage-calculator.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Average Percentage Calculator - Simple, Weighted &amp; Marks">
+<meta name="twitter:description" content="Free average percentage calculator. Find the average of percentages, a weighted average, or overall percentage from marks in 5 or more subjects, with steps.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://altoolsfree.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Average Percentage Calculator", "item": "https://altoolsfree.github.io/average-percentage-calculator.html"}]}</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How do you calculate the average of percentages?","acceptedAnswer":{"@type":"Answer","text":"Add all the percentages together and divide by how many there are. For 70%, 80% and 90%, the sum is 240 and the average is 240 / 3 = 80%."}},
+{"@type":"Question","name":"How do you calculate average percentage?","acceptedAnswer":{"@type":"Answer","text":"Add all the percentages together and divide by how many there are. For 70%, 80% and 90%, the sum is 240 and the average is 240 / 3 = 80%."}},
+{"@type":"Question","name":"What is the formula for average percentage?","acceptedAnswer":{"@type":"Answer","text":"Average percentage = (sum of all percentages) / (number of percentages). For marks, use overall percentage = (total marks obtained / total maximum marks) x 100."}},
+{"@type":"Question","name":"How do I calculate the average percentage of 5 subjects?","acceptedAnswer":{"@type":"Answer","text":"If every subject is out of 100, add the five marks and divide by 5. For example, 72, 85, 64, 90 and 78 add up to 389, and 389 / 5 = 77.8%. If the subjects have different totals, add all marks and all totals first, then divide and multiply by 100."}},
+{"@type":"Question","name":"How do I find the average of two percentages?","acceptedAnswer":{"@type":"Answer","text":"Add the two percentages and divide by 2. For 60% and 80%, the average is (60 + 80) / 2 = 70%. This works when both percentages come from the same total."}},
 {"@type":"Question","name":"What is a weighted average percentage?","acceptedAnswer":{"@type":"Answer","text":"A weighted average gives each percentage a different importance. Multiply each percentage by its weight, add the results, then divide by the total weight."}},
 {"@type":"Question","name":"Can I just average percentages from different totals?","acceptedAnswer":{"@type":"Answer","text":"Not always. If the percentages come from different totals, add the marks and totals first. For example, 5 out of 10 and 80 out of 100 gives 85 out of 110, which is 77.3%, not the simple average of 65%."}},
-{"@type":"Question","name":"How do I find my average percentage from marks?","acceptedAnswer":{"@type":"Answer","text":"Add your marks from all subjects, add the total marks of all subjects, divide the first by the second and multiply by 100."}}
+{"@type":"Question","name":"How do I find my average percentage from marks?","acceptedAnswer":{"@type":"Answer","text":"Add your marks from all subjects, add the total marks of all subjects, divide the first by the second and multiply by 100."}},
+{"@type":"Question","name":"Is an average percent calculator the same as a percentage average calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. Average percent calculator, percentage average calculator and average percentage calculator all mean the same tool. It finds the average of several percentages or your overall percentage from marks."}}
 ]}
 </script>
 <style>
@@ -24,6 +41,8 @@ header{background:var(--g)}
 .logo{font-size:20px;font-weight:700}
 .nav div a{margin-left:16px;font-size:15px}
 main{max-width:880px;margin:0 auto;padding:24px 18px 48px}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 6px}
+.crumbs a{color:var(--g);text-decoration:none;font-weight:600}
 h1{font-size:clamp(26px,5vw,36px);line-height:1.2;margin:6px 0 8px}
 h2{font-size:21px;margin:34px 0 10px}
 h3{font-size:17px;margin:18px 0 6px}
@@ -43,11 +62,14 @@ textarea:focus,button:focus-visible{outline:3px solid #7fcfa6;outline-offset:2px
 .big{font-size:42px;font-weight:700;line-height:1.1;word-break:break-all}
 .sub{color:var(--muted);margin:6px 0 0}
 .steps{background:var(--bg);border-radius:9px;padding:12px;margin-top:12px;font-size:15px;overflow-wrap:anywhere}
+.ad-box{max-width:100%;margin:20px auto 0;overflow:hidden}
 table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
 th{color:var(--muted)}
 .tw{overflow-x:auto}
 pre{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:9px;overflow-x:auto;font-size:14px}
+ol,ul{margin:0 0 12px 22px}
+li{margin-bottom:4px}
 details{border-bottom:1px solid var(--line);padding:12px 0}
 summary{cursor:pointer;font-weight:600}
 .rel a{display:inline-block;margin:4px 14px 4px 0;color:var(--g);font-weight:600}
@@ -62,6 +84,7 @@ footer a{color:#fff;margin:0 8px}
   <div class="nav">
     <a class="logo" href="index.html">ALTools</a>
     <div>
+      <a href="index.html">Home</a>
       <a href="index.html#tools">Tools</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -70,8 +93,12 @@ footer a{color:#fff;margin:0 8px}
 </header>
 
 <main>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Average Percentage Calculator
+  </nav>
+
   <h1>Average Percentage Calculator</h1>
-  <p class="lead">Find the average of several percentages, a weighted average, or your overall percentage from marks in different subjects. Pick a mode, enter your numbers and get the answer with the steps.</p>
+  <p class="lead">Free average percentage calculator (also called an average percent calculator or percentage average calculator). Find the average of several percentages, a weighted average, or your overall percentage from marks in different subjects. Pick a mode, enter your numbers and get the answer with the steps.</p>
 
   <section class="tool">
     <div class="tabs" role="group" aria-label="Calculator mode">
@@ -94,16 +121,33 @@ footer a{color:#fff;margin:0 8px}
     </div>
   </section>
 
-  <h2>How to calculate the average of percentages</h2>
+  <!-- Adsterra Native Banner (below the calculator) -->
+  <div class="ad-box">
+    <script async="async" data-cfasync="false" src="https://pl31790024.profitableratecpmnetwork.com/a85beb804a4083df9a0183cdc4660c07/invoke.js"></script>
+    <div id="container-a85beb804a4083df9a0183cdc4660c07"></div>
+  </div>
+
+  <h2>How to calculate average percentage</h2>
+  <p>To calculate the average percentage, add all the percentages together and divide the total by the number of percentages. For example, the average of 70%, 80% and 90% is (70 + 80 + 90) / 3 = 80%.</p>
+  <ol>
+    <li>Write down all the percentages.</li>
+    <li>Add them together.</li>
+    <li>Divide the sum by how many percentages you added.</li>
+  </ol>
+
+  <h2>Average percentage formula</h2>
   <pre>Average = (sum of all percentages) / (number of percentages)</pre>
   <p>Example: 70%, 80% and 90%. The sum is 240. Divide by 3 to get <strong>80%</strong>.</p>
+
+  <h2>Average of two percentages</h2>
+  <p>To find the average of two percentages, add them and divide by 2. For 60% and 80%, the average is (60 + 80) / 2 = <strong>70%</strong>. This works when both percentages come from the same total. If the totals are different, see the section further below.</p>
 
   <h2>Weighted average percentage</h2>
   <p>Use this when some items count more than others, for example an exam worth 60% of the grade and homework worth 40%.</p>
   <pre>Weighted average = (p1 x w1 + p2 x w2 + ...) / (w1 + w2 + ...)</pre>
   <p>Example: exam 85% with weight 60, homework 70% with weight 40. (85 x 60 + 70 x 40) / 100 = <strong>79%</strong>.</p>
 
-  <h2>Average percentage from marks</h2>
+  <h2>Average percentage of marks (overall percentage)</h2>
   <p>To find your overall percentage across subjects, add all the marks you got, add all the total marks, then divide and multiply by 100.</p>
   <pre>Overall % = (total marks obtained / total maximum marks) x 100</pre>
   <div class="tw">
@@ -119,14 +163,39 @@ footer a{color:#fff;margin:0 8px}
   </div>
   <p>185 / 230 x 100 = <strong>80.43%</strong>.</p>
 
+  <h2>Average percentage of 5 subjects</h2>
+  <p>If all five subjects are out of 100, add the five marks and divide by 5.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Subject</th><th>Marks (out of 100)</th></tr></thead>
+      <tbody>
+        <tr><td>Subject 1</td><td>72</td></tr>
+        <tr><td>Subject 2</td><td>85</td></tr>
+        <tr><td>Subject 3</td><td>64</td></tr>
+        <tr><td>Subject 4</td><td>90</td></tr>
+        <tr><td>Subject 5</td><td>78</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>389</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>389 / 5 = <strong>77.8%</strong>. To check this with the calculator, choose Marks to % and enter each subject as marks, 100.</p>
+
   <h2>Do not average percentages from different totals</h2>
   <p>Say you got 5 out of 10 on a quiz (50%) and 80 out of 100 on a test (80%). The simple average of 50% and 80% is 65%. But your real overall score is 85 out of 110, which is 77.3%. When totals are different, use the Marks to % mode.</p>
 
+  <h2 lang="bn">গড় শতাংশ ক্যালকুলেটর (Average Percentage Calculator Bangla)</h2>
+  <p lang="bn">গড় শতাংশ বের করতে সব শতাংশ যোগ করে যতটি সংখ্যা আছে তা দিয়ে ভাগ করুন। যেমন ৭০%, ৮০% ও ৯০% এর গড় = (৭০ + ৮০ + ৯০) ÷ ৩ = ৮০%।</p>
+  <p lang="bn">বিভিন্ন বিষয়ের নম্বর থেকে মোট শতাংশ বের করতে প্রাপ্ত নম্বরের যোগফলকে পূর্ণমানের যোগফল দিয়ে ভাগ করে ১০০ দিয়ে গুণ করুন। ওপরের ক্যালকুলেটরে "Marks to %" বেছে নিয়ে প্রতিটি বিষয়ের নম্বর ও পূর্ণমান দিন।</p>
+
   <h2>Frequently asked questions</h2>
-  <details><summary>How do you calculate the average of percentages?</summary><p>Add all the percentages together and divide by how many there are. For 70%, 80% and 90%, the sum is 240 and the average is 240 / 3 = 80%.</p></details>
+  <details><summary>How do you calculate average percentage?</summary><p>Add all the percentages together and divide by how many there are. For 70%, 80% and 90%, the sum is 240 and the average is 240 / 3 = 80%.</p></details>
+  <details><summary>What is the formula for average percentage?</summary><p>Average percentage = (sum of all percentages) / (number of percentages). For marks, use overall percentage = (total marks obtained / total maximum marks) x 100.</p></details>
+  <details><summary>How do I calculate the average percentage of 5 subjects?</summary><p>If every subject is out of 100, add the five marks and divide by 5. For example, 72, 85, 64, 90 and 78 add up to 389, and 389 / 5 = 77.8%. If the subjects have different totals, add all marks and all totals first, then divide and multiply by 100.</p></details>
+  <details><summary>How do I find the average of two percentages?</summary><p>Add the two percentages and divide by 2. For 60% and 80%, the average is (60 + 80) / 2 = 70%. This works when both percentages come from the same total.</p></details>
   <details><summary>What is a weighted average percentage?</summary><p>A weighted average gives each percentage a different importance. Multiply each percentage by its weight, add the results, then divide by the total weight.</p></details>
   <details><summary>Can I just average percentages from different totals?</summary><p>Not always. If the percentages come from different totals, add the marks and totals first. For example, 5 out of 10 and 80 out of 100 gives 85 out of 110, which is 77.3%, not the simple average of 65%.</p></details>
   <details><summary>How do I find my average percentage from marks?</summary><p>Add your marks from all subjects, add the total marks of all subjects, divide the first by the second and multiply by 100.</p></details>
+  <details><summary>Is an average percent calculator the same as a percentage average calculator?</summary><p>Yes. Average percent calculator, percentage average calculator and average percentage calculator all mean the same tool. It finds the average of several percentages or your overall percentage from marks.</p></details>
 
   <h2>Related calculators</h2>
   <p class="rel">
@@ -134,6 +203,7 @@ footer a{color:#fff;margin:0 8px}
     <a href="increase-percentage-calculator.html">Increase Percentage Calculator</a>
     <a href="discount-percentage-calculator.html">Discount Calculator</a>
     <a href="bmi-calculator.html">BMI Calculator</a>
+    <a href="word-counter.html">Word Counter</a>
   </p>
 </main>
 
@@ -148,7 +218,7 @@ footer a{color:#fff;margin:0 8px}
   var mode='avg';
 
   var cfg={
-    avg:{lbl:'Percentages',ph:'70, 80, 90',hint:'Separate the numbers with commas, spaces or new lines.',btn:'Calculate average'},
+    avg:{lbl:'Percentages',ph:'70, 80, 90',hint:'Separate the numbers with commas, spaces or new lines. A % sign is fine.',btn:'Calculate average'},
     wt:{lbl:'Percentage and weight (one pair per line)',ph:'85, 60\n70, 40',hint:'Write each line as: percentage, weight. Example: 85, 60 means 85% with weight 60.',btn:'Calculate weighted average'},
     mk:{lbl:'Marks obtained and total marks (one subject per line)',ph:'78, 100\n41, 50\n66, 80',hint:'Write each line as: marks, total. Example: 78, 100 or 78/100.',btn:'Calculate overall percentage'}
   };
@@ -172,11 +242,13 @@ footer a{color:#fff;margin:0 8px}
   }
 
   function parseList(s){
+    s=s.replace(/%/g,'');
     var parts=s.split(/[\s,;]+/).filter(Boolean), out=[];
     for(var i=0;i<parts.length;i++){var n=Number(parts[i]);if(isNaN(n))return null;out.push(n);}
     return out;
   }
   function parsePairs(s){
+    s=s.replace(/%/g,'');
     var lines=s.split(/\n/).map(function(x){return x.trim()}).filter(Boolean), out=[];
     for(var i=0;i<lines.length;i++){
       var p=lines[i].split(/[\s,;\/]+/).filter(Boolean);
@@ -238,5 +310,9 @@ footer a{color:#fff;margin:0 8px}
   setMode('avg');
 })();
 </script>
+
+<!-- Adsterra Social Bar (once) -->
+<script src="https://pl31790023.profitableratecpmnetwork.com/2c/70/cd/2c70cd2c974d45daa45e39a3ca39f45e.js"></script>
+
 </body>
-  </html>
+</html>
